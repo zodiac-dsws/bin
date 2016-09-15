@@ -1,0 +1,1 @@
+java -jar scorpio-1.0.jar

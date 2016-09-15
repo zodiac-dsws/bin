@@ -1,0 +1,1 @@
+java -jar gemini-1.0.jar
