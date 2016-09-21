@@ -1,0 +1,19 @@
+--------------------------------------------------------
+Start Time         : null
+Workflow           : SPECTRAL_PORTAL
+Experiment         : 90A89A06-E055-497
+Fragment           : 73BBA783
+Activity           : 7FA4E356
+Instance           : 92BB1E68-D16C-4
+Command            : runsage2.jar
+Executor           : RUNSAGE
+Executor Type      : MAP
+Target Table       : sage_out
+--------------------------------------------------------
+<?xml version='1.0' encoding='UTF-8'?><instance workflow='SPECTRAL_PORTAL' experiment='90A89A06-E055-497' serial='92BB1E68-D16C-4' id='1498336' fragment='73BBA783'><activity><order>0</order><serial>7FA4E356</serial><executorType>MAP</executorType><executor>RUNSAGE</executor><type>MAP</type><inputData>adjacencyb,caixa1,adjacency,clickb,mindegree,chromaticb,gorder,chromatic,laplacian,optifunc,paramid,biptonly,trianglefree,laplacianb,slaplacianb,numedges,slaplacian,click,largestdegree,maxdegree,allowdiscgraphs,maxresults,grafo
+off,min,on,off,1,off,8,off,off,\lambda_2+\chi,1476170,off,off,off,off,off,off,off,off,7,on,2,G?AEN{</inputData><files></files><targetTable>sage_out</targetTable><command><![CDATA[runsage2.jar]]></command></activity></instance>
+--------------------------------------------------------
+
+
+
+

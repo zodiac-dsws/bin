@@ -1,0 +1,145 @@
+--------------------------------------------------------
+Start Time         : null
+Workflow           : SPECTRAL_PORTAL
+Experiment         : 90A89A06-E055-497
+Fragment           : 00610D7C
+Activity           : 27CB84F7
+Instance           : 3BD006C5-ABF9-4
+Command            : insert into select_lapack_out ( 
+	id_instance, 
+	id_experiment, 
+	id_activity, 
+	adjacency, 
+	laplacian, 
+	slaplacian, 
+	adjacencyb, 
+	laplacianb, 
+	slaplacianb, 
+	optifunc, 
+	caixa1, 
+	gorder, 
+	mindegree, 
+	maxdegree, 
+	trianglefree, 
+	allowdiscgraphs, 
+	biptonly, 
+	maxresults, 
+	grafo,
+	paramid
+) 
+select 
+	1498324, 354, 4316, 
+	sp.adjacency, 
+	sp.laplacian, 
+	sp.slaplacian, 
+	sp.adjacencyb, 
+	sp.laplacianb, 
+	sp.slaplacianb, 
+	sp.optifunc, 
+	sp.caixa1, 
+	sp.gorder, 
+	sp.mindegree, 
+	sp.maxdegree, 
+	sp.trianglefree, 
+	sp.allowdiscgraphs, 
+	sp.biptonly, 
+	sp.maxresults, 
+	gd.grafo,
+	sp.id_instance	
+from 
+	graphdatabase gd, spectral_parameters sp 
+where 
+	sp.id_experiment = 354 and 
+	sp.gorder::int = gd.ordem and 
+	sp.mindegree::int = gd.grauminimo and 
+	sp.maxdegree::int = gd.graumaximo and 
+	( case when sp.trianglefree = 'on' then 1 else 0 end ) = gd.trianglefree and 
+	( case	when sp.biptonly = 'on' then 1 else 0 end ) = gd.bipartite and 
+	( case when sp.allowdiscgraphs = 'on' then 1 else 0 end ) = gd.conexo and 
+	( sp.optifunc like '%lambda%' or 
+		sp.optifunc like '%mu%' or 
+		sp.optifunc like '%q!_%' ESCAPE '!' 
+	) 
+Executor           : select_lapack
+Executor Type      : SELECT
+Target Table       : select_lapack_out
+--------------------------------------------------------
+<?xml version='1.0' encoding='UTF-8'?><instance workflow='SPECTRAL_PORTAL' experiment='90A89A06-E055-497' serial='3BD006C5-ABF9-4' id='1498324' fragment='00610D7C'><activity><order>0</order><serial>27CB84F7</serial><executorType>SELECT</executorType><executor>select_lapack</executor><type>SELECT</type><inputData></inputData><files></files><targetTable>select_lapack_out</targetTable><command><![CDATA[insert into select_lapack_out ( 
+	id_instance, 
+	id_experiment, 
+	id_activity, 
+	adjacency, 
+	laplacian, 
+	slaplacian, 
+	adjacencyb, 
+	laplacianb, 
+	slaplacianb, 
+	optifunc, 
+	caixa1, 
+	gorder, 
+	mindegree, 
+	maxdegree, 
+	trianglefree, 
+	allowdiscgraphs, 
+	biptonly, 
+	maxresults, 
+	grafo,
+	paramid
+) 
+select 
+	1498324, 354, 4316, 
+	sp.adjacency, 
+	sp.laplacian, 
+	sp.slaplacian, 
+	sp.adjacencyb, 
+	sp.laplacianb, 
+	sp.slaplacianb, 
+	sp.optifunc, 
+	sp.caixa1, 
+	sp.gorder, 
+	sp.mindegree, 
+	sp.maxdegree, 
+	sp.trianglefree, 
+	sp.allowdiscgraphs, 
+	sp.biptonly, 
+	sp.maxresults, 
+	gd.grafo,
+	sp.id_instance	
+from 
+	graphdatabase gd, spectral_parameters sp 
+where 
+	sp.id_experiment = 354 and 
+	sp.gorder::int = gd.ordem and 
+	sp.mindegree::int = gd.grauminimo and 
+	sp.maxdegree::int = gd.graumaximo and 
+	( case when sp.trianglefree = 'on' then 1 else 0 end ) = gd.trianglefree and 
+	( case	when sp.biptonly = 'on' then 1 else 0 end ) = gd.bipartite and 
+	( case when sp.allowdiscgraphs = 'on' then 1 else 0 end ) = gd.conexo and 
+	( sp.optifunc like '%lambda%' or 
+		sp.optifunc like '%mu%' or 
+		sp.optifunc like '%q!_%' ESCAPE '!' 
+	) ]]></command></activity></instance>
+--------------------------------------------------------
+
+
+
+
+--------------------------------------------------------
+Start Time         : null
+Workflow           : SPECTRAL_PORTAL
+Experiment         : 90A89A06-E055-497
+Fragment           : 73BBA783
+Activity           : 7FA4E356
+Instance           : 90D8154D-7509-4
+Command            : runsage2.jar
+Executor           : RUNSAGE
+Executor Type      : MAP
+Target Table       : sage_out
+--------------------------------------------------------
+<?xml version='1.0' encoding='UTF-8'?><instance workflow='SPECTRAL_PORTAL' experiment='90A89A06-E055-497' serial='90D8154D-7509-4' id='1498332' fragment='73BBA783'><activity><order>0</order><serial>7FA4E356</serial><executorType>MAP</executorType><executor>RUNSAGE</executor><type>MAP</type><inputData>adjacencyb,caixa1,adjacency,clickb,mindegree,chromaticb,gorder,chromatic,laplacian,optifunc,paramid,biptonly,trianglefree,laplacianb,slaplacianb,numedges,slaplacian,click,largestdegree,maxdegree,allowdiscgraphs,maxresults,grafo
+off,min,on,off,1,off,8,off,off,\lambda_2+\chi,1476170,off,off,off,off,off,off,off,off,7,on,2,G?ABF{</inputData><files></files><targetTable>sage_out</targetTable><command><![CDATA[runsage2.jar]]></command></activity></instance>
+--------------------------------------------------------
+
+
+
+

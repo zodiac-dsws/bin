@@ -1,0 +1,16 @@
+[DEBUG] Main Credentials: postgres | sagitarii
+[DEBUG] ScorpioFederate Starting The Zodiac Federation
+[DEBUG] ScorpioFederate joing Federation Execution
+[DEBUG] ScorpioFederate starting Scorpio...
+[DEBUG] ScorpioClass publish Scorpio attributes
+[DEBUG] ScorpioClass creating new Scorpio Object instance
+[DEBUG] ScorpioClass updating all attributes for first time
+[DEBUG] CoreClass publish Core attributes
+[DEBUG] CoreClass subscribe to Core current instance attribute
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] ScorpioFederate done.

@@ -1,6 +1,1337 @@
-ERROR [main] portico.lrc.jgroups: FAILURE createFederation: already exists, name=Zodiac
-WARN  [VERIFY_SUSPECT.TimerThread,Zodiac,HAN-59355] portico.lrc.jgroups: Detected that federate [Sagittarius] may have crashed, investigating...
-WARN  [Regular] portico.lrc.jgroups: Federate [Sagittarius] has crashed. Sending fake resignation because it was too rude to.
-WARN  [VERIFY_SUSPECT.TimerThread,Zodiac,HAN-59355] portico.lrc.jgroups: Detected that federate [Gemini] may have crashed, investigating...
-WARN  [Regular] portico.lrc.jgroups: Federate [Gemini] has crashed. Sending fake resignation because it was too rude to.
-WARN  [Regular] portico.lrc.jgroups: Unknown channel member crashed. Don't think it was a federate. Ignoring. uuid=03138880-c4fc-4f99-aca0-810ff9d4e7c5
+DEBUG [main] portico.lrc: Creating new LRC
+DEBUG [main] portico.lrc: Portico version: 2.1.0 (build 3)
+DEBUG [main] portico.lrc: Interface: IEEE1516e
+TRACE [main] portico.lrc: Provided connection implementation is "org.portico.bindings.jgroups.JGroupsConnection"
+TRACE [main] portico.lrc: Trying to load connection class: org.portico.bindings.jgroups.JGroupsConnection
+TRACE [main] portico.lrc: ATTEMPT create IConnection, class= class org.portico.bindings.jgroups.JGroupsConnection
+TRACE [main] portico.lrc: SUCCESS created IConnection, class= class org.portico.bindings.jgroups.JGroupsConnection
+TRACE [main] portico.lrc: Applying modules using component keyword: lrc1516e
+TRACE [main] portico.lrc: STARTING Apply module [lrc13-callback] to LRC
+TRACE [main] portico.lrc: Applied [0/24] handlers
+TRACE [main] portico.lrc: STARTING Apply module [lrc1516-callback] to LRC
+TRACE [main] portico.lrc: Applied [0/11] handlers
+TRACE [main] portico.lrc: STARTING Apply module [lrc1516e-callback] to LRC
+TRACE [main] portico.lrc: Applied [24/24] handlers
+TRACE [main] portico.lrc: STARTING Apply module [lrc-base] to LRC
+TRACE [main] portico.lrc: Applied [82/92] handlers
+DEBUG [main] portico.lrc: Messaging framework configuration complete
+INFO  [main] portico.lrc: LRC initialized (HLA version: IEEE1516e)
+INFO  [main] portico.lrc: Opening LRC Connection
+INFO  [main] portico.lrc.jgroups: jgroups connection is up and running
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Starting immediate callback delivery processor
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/D:/zodiac/bin/scorpio/foms/HLAstandardMIM.xml
+DEBUG [main] portico.lrc: ATTEMPT Create federation execution [Zodiac]
+TRACE [main] portico.lrc.jgroups: ATTEMPT Connecting to channel [Zodiac]
+DEBUG [main] portico.lrc.jgroups: SUCCESS Connected to channel [Zodiac]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=0, source=HAN-40855
+DEBUG [Regular] portico.lrc.jgroups: (GMS) findCoordinator(HAN-40855)
+INFO  [main] portico.lrc.jgroups: No co-ordinator found - appointing myself!
+DEBUG [main] portico.lrc.jgroups: REQUEST createFederation: name=Zodiac
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=19339, source=HAN-40855
+DEBUG [Regular] portico.lrc.jgroups: (GMS) createFederation(HAN-40855)
+DEBUG [Regular] portico.lrc.jgroups: Received federation creation notification: federation=Zodiac, fomSize=19339b, source=2e8f6ce5-8c33-43e8-9036-908d9f7fed29
+INFO  [Regular] portico.lrc.jgroups: Federation [Zodiac] has been created
+INFO  [main] portico.lrc.jgroups: SUCCESS createFederation: name=Zodiac
+INFO  [main] portico.lrc: SUCCESS Created federation execution [Zodiac]
+DEBUG [main] portico.lrc: ATTEMPT Join federate [Scorpio Node 9C-8E-99-35-12-BA] to federation [Zodiac]
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/D:/zodiac/bin/scorpio/foms/zodiac.xml
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/D:/zodiac/bin/scorpio/foms/sagittarius.xml
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/D:/zodiac/bin/scorpio/foms/core.xml
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/D:/zodiac/bin/scorpio/foms/gemini.xml
+DEBUG [main] portico.lrc.fom: Parsing FED file (format=ieee1516e): file:/D:/zodiac/bin/scorpio/foms/scorpio.xml
+DEBUG [main] portico.lrc: Parsed [5] additional FOM modules
+DEBUG [main] portico.lrc.jgroups: Validate that [5] modules can merge successfully with the existing FOM
+TRACE [main] portico.lrc.merger: Beginning merge of 6 FOM models
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/zodiac.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.ExperimentFinished]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.InstancesCreated]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.ExperimentStarted]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.GenerateInstances]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.InstanceCreationError]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/sagittarius.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Sagittarius]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/core.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Core]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/gemini.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Gemini]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/scorpio.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Scorpio]
+DEBUG [main] portico.lrc.jgroups: Modules can be merged successfully, continue with join
+DEBUG [main] portico.lrc.jgroups: REQUEST joinFederation: federate=Scorpio Node 9C-8E-99-35-12-BA, federation=Zodiac
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=30, source=HAN-40855
+DEBUG [Regular] portico.lrc.jgroups: (GMS) joinFederation(HAN-40855)
+DEBUG [Regular] portico.lrc.jgroups: Received federate join notification: federate=Scorpio Node 9C-8E-99-35-12-BA, federation=Zodiac, source=2e8f6ce5-8c33-43e8-9036-908d9f7fed29
+INFO  [Regular] portico.lrc.jgroups: Federate [Scorpio Node 9C-8E-99-35-12-BA] joined federation [Zodiac]
+INFO  [main] portico.lrc.jgroups: SUCCESS Joined federation with name=Scorpio Node 9C-8E-99-35-12-BA
+DEBUG [main] portico.lrc.jgroups: Merging 5 additional FOM modules that we receive with join request
+TRACE [main] portico.lrc.merger: Beginning merge of 6 FOM models
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/zodiac.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.GenerateInstances]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.InstancesCreated]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.InstanceCreationError]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.ExperimentFinished]
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAinteractionRoot.ExperimentStarted]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/sagittarius.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Sagittarius]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/core.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Core]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/gemini.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Gemini]
+TRACE [main] portico.lrc.merger: Merging [file:/D:/zodiac/bin/scorpio/foms/scorpio.xml] into combined FOM
+TRACE [main] portico.lrc.merger:    -> Inserting class [HLAobjectRoot.Scorpio]
+TRACE [main] portico.lrc: Created Mom.Federation object, added to Repository (undiscovered)
+TRACE [main] portico.lrc: Created Mom.Federate(Scorpio Node 9C-8E-99-35-12-BA), queued discovery notification
+TRACE [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received MOM object discovery for federate [MOM.Federate(Scorpio Node 9C-8E-99-35-12-BA)]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD Discovery of object (not subscribed): object=1
+TRACE [main] portico.lrc: joined federation, waiting for RoleCalls from [1]
+INFO  [main] portico.lrc: SUCCESS Joined federate [Scorpio Node 9C-8E-99-35-12-BA] to federation [Zodiac]: handle=1
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=6154, source=HAN-40855
+INFO  [main] portico.lrc: FOM in use for federation [Zodiac]:
+== Beginning Object Model Render ==
+===================================
+==        Routing Spaces         ==
+===================================
+===================================
+==        Object Classes         ==
+===================================
+-> (object class): HLAobjectRoot (handle: 501)
+       (attribute): HLAprivilegeToDeleteObject, handle=502, order=TIMESTAMP, transport=RELIABLE, space=null
+    -> (object class): Scorpio (handle: 768)
+           (attribute): TotalMemory,         handle=772, order=RECEIVE, transport=BEST_EFFORT, space=null
+           (attribute): SOName,              handle=773, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): TotalInstances,      handle=774, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): MachineName,         handle=777, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): CpuLoad,             handle=769, order=RECEIVE, transport=BEST_EFFORT, space=null
+           (attribute): IPAddress,           handle=770, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): MACAddress,          handle=775, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): FreeMemory,          handle=771, order=RECEIVE, transport=BEST_EFFORT, space=null
+           (attribute): AvailableProcessors, handle=776, order=RECEIVE, transport=BEST_EFFORT, space=null
+    -> (object class): Gemini (handle: 766)
+           (attribute): MACAddress, handle=767, order=RECEIVE, transport=RELIABLE, space=null
+    -> (object class): Core (handle: 754)
+           (attribute): IsWorking,           handle=758, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): ExecutorType,        handle=762, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): FragmentSerial,      handle=757, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): InstanceSerial,      handle=763, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): OwnerNode,           handle=755, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): SerialNumber,        handle=756, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): CurrentInstance,     handle=759, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): LastExecutionResult, handle=765, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): ActivitySerial,      handle=761, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): ExperimentSerial,    handle=764, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): Executor,            handle=760, order=RECEIVE, transport=RELIABLE, space=null
+    -> (object class): HLAmanager (handle: 1)
+        -> (object class): HLAfederate (handle: 2)
+               (attribute): HLAlogicalTime,                     handle=16, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAROlength,                        handle=21, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesRegistered,       handle=32, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesRemoved,          handle=31, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeManagerState,                handle=15, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAconveyRegionDesignatorSets,      handle=498, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesDiscovered,       handle=33, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeGrantedTime,                 handle=34, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeConstrained,                 handle=11, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAGALT,                            handle=19, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAinteractionsReceived,            handle=25, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateName,                    handle=5, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesUpdated,          handle=28, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlookahead,                       handle=17, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAupdatesSent,                     handle=24, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateHost,                    handle=7, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAasynchronousDelivery,            handle=13, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAinteractionsSent,                handle=26, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesThatCanBeDeleted, handle=27, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesReflected,        handle=29, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAconveyProducingFederate,         handle=499, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeAdvancingTime,               handle=35, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLALITS,                            handle=20, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAobjectInstancesDeleted,          handle=30, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLARTIversion,                      handle=9, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeRegulating,                  handle=12, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAFOMmoduleDesignatorList,         handle=8, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateState,                   handle=14, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateType,                    handle=6, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLATSOlength,                       handle=22, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederateHandle,                  handle=4, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAreflectionsReceived,             handle=23, order=RECEIVE, transport=RELIABLE, space=null
+        -> (object class): HLAfederation (handle: 3)
+               (attribute): HLAMIMdesignator,           handle=39, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAFOMmoduleDesignatorList, handle=40, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAautoProvide,             handle=48, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAnextSaveName,            handle=46, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAtimeImplementationName,  handle=43, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlastSaveName,            handle=44, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLARTIversion,              handle=38, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAcurrentFDD,              handle=41, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAnextSaveTime,            handle=47, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederatesInFederation,   handle=37, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAlastSaveTime,            handle=45, order=RECEIVE, transport=RELIABLE, space=null
+               (attribute): HLAfederationName,          handle=36, order=RECEIVE, transport=RELIABLE, space=null
+    -> (object class): Sagittarius (handle: 748)
+           (attribute): MACAddress,           handle=750, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): RunningExperiments,   handle=749, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): BufferCurrentLoad,    handle=751, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): InstanceOutputBuffer, handle=752, order=RECEIVE, transport=RELIABLE, space=null
+           (attribute): InstanceInputBuffer,  handle=753, order=RECEIVE, transport=RELIABLE, space=null
+===================================
+==      Interaction Classes      ==
+===================================
+-> (interaction class): HLAinteractionRoot (handle: 550, order=TIMESTAMP, transport=RELIABLE, space=null)
+    -> (interaction class): GenerateInstances (handle: 736, order=RECEIVE, transport=RELIABLE, space=null)
+           (parameter): ExperimentSerial, handle=737
+    -> (interaction class): ExperimentFinished (handle: 744, order=RECEIVE, transport=RELIABLE, space=null)
+           (parameter): ExperimentSerial, handle=745
+    -> (interaction class): ExperimentStarted (handle: 746, order=RECEIVE, transport=RELIABLE, space=null)
+           (parameter): ExperimentSerial, handle=747
+    -> (interaction class): InstancesCreated (handle: 738, order=RECEIVE, transport=RELIABLE, space=null)
+           (parameter): ExperimentSerial, handle=740
+           (parameter): InstanceCount,    handle=739
+    -> (interaction class): InstanceCreationError (handle: 741, order=RECEIVE, transport=RELIABLE, space=null)
+           (parameter): Reason,           handle=743
+           (parameter): ExperimentSerial, handle=742
+    -> (interaction class): HLAmanager (handle: 551, order=RECEIVE, transport=RELIABLE, space=null)
+        -> (interaction class): HLAfederation (handle: 715, order=RECEIVE, transport=RELIABLE, space=null)
+            -> (interaction class): HLArequest (handle: 719, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestFOMmoduleData (handle: 722, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAFOMmoduleIndicator, handle=723
+                -> (interaction class): HLArequestMIMdata (handle: 724, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSynchronizationPointStatus (handle: 721, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSynchronizationPoints (handle: 720, order=RECEIVE, transport=RELIABLE, space=null)
+            -> (interaction class): HLAreport (handle: 725, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAreportSynchronizationPointStatus (handle: 728, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsyncPointName,      handle=729
+                       (parameter): HLAsyncPointFederates, handle=730
+                -> (interaction class): HLAreportSynchronizationPoints (handle: 726, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsyncPoints, handle=727
+                -> (interaction class): HLAreportFOMmoduleData (handle: 731, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAFOMmoduleData,      handle=733
+                       (parameter): HLAFOMmoduleIndicator, handle=732
+                -> (interaction class): HLAreportMIMdata (handle: 734, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAMIMdata, handle=735
+            -> (interaction class): HLAadjust (handle: 716, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsetSwitches (handle: 717, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAautoProvide, handle=718
+        -> (interaction class): HLAfederate (handle: 552, order=RECEIVE, transport=RELIABLE, space=null)
+               (parameter): HLAfederate, handle=553
+            -> (interaction class): HLAservice (handle: 641, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLApublishObjectClassAttributes (handle: 651, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,   handle=652
+                       (parameter): HLAattributeList, handle=653
+                -> (interaction class): HLAenableTimeRegulation (handle: 689, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlookahead, handle=690
+                -> (interaction class): HLAunsubscribeInteractionClass (handle: 671, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=672
+                -> (interaction class): HLAdisableTimeConstrained (handle: 693, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAunpublishObjectClassAttributes (handle: 654, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,   handle=655
+                       (parameter): HLAattributeList, handle=656
+                -> (interaction class): HLAsubscribeObjectClassAttributes (handle: 661, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,   handle=662
+                       (parameter): HLAattributeList, handle=663
+                       (parameter): HLAactive,        handle=664
+                -> (interaction class): HLAdeleteObjectInstance (handle: 673, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtag,            handle=675
+                       (parameter): HLAobjectInstance, handle=674
+                       (parameter): HLAtimeStamp,      handle=676
+                -> (interaction class): HLAmodifyLookahead (handle: 706, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlookahead, handle=707
+                -> (interaction class): HLAresignFederationExecution (handle: 642, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAresignAction, handle=643
+                -> (interaction class): HLAfederateSaveComplete (handle: 647, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuccessIndicator, handle=648
+                -> (interaction class): HLAfederateSaveBegun (handle: 646, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAfederateRestoreComplete (handle: 649, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuccessIndicator, handle=650
+                -> (interaction class): HLAsubscribeInteractionClass (handle: 668, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAactive,           handle=670
+                       (parameter): HLAinteractionClass, handle=669
+                -> (interaction class): HLArequestInteractionTransportationTypeChange (handle: 683, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=684
+                       (parameter): HLAtransportation,   handle=685
+                -> (interaction class): HLAflushQueueRequest (handle: 702, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=703
+                -> (interaction class): HLAdisableTimeRegulation (handle: 691, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAunsubscribeObjectClassAttributes (handle: 665, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectClass,   handle=666
+                       (parameter): HLAattributeList, handle=667
+                -> (interaction class): HLAdisableAsynchronousDelivery (handle: 705, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAunconditionalAttributeOwnershipDivestiture (handle: 686, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=687
+                       (parameter): HLAattributeList,  handle=688
+                -> (interaction class): HLAchangeInteractionOrderType (handle: 712, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsendOrder,        handle=714
+                       (parameter): HLAinteractionClass, handle=713
+                -> (interaction class): HLApublishInteractionClass (handle: 657, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=658
+                -> (interaction class): HLAenableTimeConstrained (handle: 692, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAtimeAdvanceRequestAvailable (handle: 696, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=697
+                -> (interaction class): HLAenableAsynchronousDelivery (handle: 704, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsynchronizationPointAchieved (handle: 644, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAlabel, handle=645
+                -> (interaction class): HLAlocalDeleteObjectInstance (handle: 677, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=678
+                -> (interaction class): HLAnextMessageRequestAvailable (handle: 700, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=701
+                -> (interaction class): HLArequestAttributeTransportationTypeChange (handle: 679, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=680
+                       (parameter): HLAattributeList,  handle=681
+                       (parameter): HLAtransportation, handle=682
+                -> (interaction class): HLAunpublishInteractionClass (handle: 659, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClass, handle=660
+                -> (interaction class): HLAchangeAttributeOrderType (handle: 708, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=709
+                       (parameter): HLAattributeList,  handle=710
+                       (parameter): HLAsendOrder,      handle=711
+                -> (interaction class): HLAnextMessageRequest (handle: 698, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=699
+                -> (interaction class): HLAtimeAdvanceRequest (handle: 694, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtimeStamp, handle=695
+            -> (interaction class): HLArequest (handle: 568, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestSubscriptions (handle: 570, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesUpdated (handle: 572, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestInteractionsSent (handle: 575, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestFOMmoduleData (handle: 580, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAFOMmoduleIndicator, handle=581
+                -> (interaction class): HLArequestObjectInstancesReflected (handle: 573, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstancesThatCanBeDeleted (handle: 571, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestUpdatesSent (handle: 574, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestReflectionsReceived (handle: 576, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestInteractionsReceived (handle: 577, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestPublications (handle: 569, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLArequestObjectInstanceInformation (handle: 578, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=579
+            -> (interaction class): HLAreport (handle: 582, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAreportObjectClassSubscription (handle: 589, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAactive,          handle=592
+                       (parameter): HLAmaxUpdateRate,   handle=593
+                       (parameter): HLAnumberOfClasses, handle=590
+                       (parameter): HLAobjectClass,     handle=591
+                       (parameter): HLAattributeList,   handle=594
+                -> (interaction class): HLAreportInteractionsReceived (handle: 612, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAtransportation,    handle=613
+                       (parameter): HLAinteractionCounts, handle=614
+                -> (interaction class): HLAreportObjectInstanceInformation (handle: 615, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAregisteredClass,            handle=618
+                       (parameter): HLAobjectInstance,             handle=616
+                       (parameter): HLAownedInstanceAttributeList, handle=617
+                       (parameter): HLAknownClass,                 handle=619
+                -> (interaction class): HLAreportObjectInstancesThatCanBeDeleted (handle: 597, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=598
+                -> (interaction class): HLAreportObjectInstancesReflected (handle: 601, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=602
+                -> (interaction class): HLAreportUpdatesSent (handle: 603, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAupdateCounts,   handle=605
+                       (parameter): HLAtransportation, handle=604
+                -> (interaction class): HLAreportServiceInvocation (handle: 623, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAsuppliedArguments, handle=626
+                       (parameter): HLAserialNumber,      handle=629
+                       (parameter): HLAservice,           handle=624
+                       (parameter): HLAsuccessIndicator,  handle=625
+                       (parameter): HLAreturnedArguments, handle=627
+                       (parameter): HLAexception,         handle=628
+                -> (interaction class): HLAreportFOMmoduleData (handle: 638, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAFOMmoduleData,      handle=640
+                       (parameter): HLAFOMmoduleIndicator, handle=639
+                -> (interaction class): HLAreportInteractionPublication (handle: 587, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClassList, handle=588
+                -> (interaction class): HLAreportException (handle: 620, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAexception, handle=622
+                       (parameter): HLAservice,   handle=621
+                -> (interaction class): HLAreportObjectInstancesUpdated (handle: 599, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstanceCounts, handle=600
+                -> (interaction class): HLAreportObjectClassPublication (handle: 583, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAattributeList,   handle=586
+                       (parameter): HLAobjectClass,     handle=585
+                       (parameter): HLAnumberOfClasses, handle=584
+                -> (interaction class): HLAreportFederateLost (handle: 634, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAfaultDescription, handle=637
+                       (parameter): HLAfederateName,     handle=635
+                       (parameter): HLAtimeStamp,        handle=636
+                -> (interaction class): HLAreportInteractionsSent (handle: 609, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionCounts, handle=611
+                       (parameter): HLAtransportation,    handle=610
+                -> (interaction class): HLAreportReflectionsReceived (handle: 606, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreflectCounts,  handle=608
+                       (parameter): HLAtransportation, handle=607
+                -> (interaction class): HLAreportMOMexception (handle: 630, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAservice,        handle=631
+                       (parameter): HLAexception,      handle=632
+                       (parameter): HLAparameterError, handle=633
+                -> (interaction class): HLAreportInteractionSubscription (handle: 595, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAinteractionClassList, handle=596
+            -> (interaction class): HLAadjust (handle: 554, order=RECEIVE, transport=RELIABLE, space=null)
+                -> (interaction class): HLAsetExceptionReporting (handle: 563, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportingState, handle=564
+                -> (interaction class): HLAsetSwitches (handle: 565, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAconveyRegionDesignatorSets, handle=566
+                       (parameter): HLAconveyProducingFederate,    handle=567
+                -> (interaction class): HLAmodifyAttributeState (handle: 557, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAobjectInstance, handle=558
+                       (parameter): HLAattributeState, handle=560
+                       (parameter): HLAattribute,      handle=559
+                -> (interaction class): HLAsetTiming (handle: 555, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportPeriod, handle=556
+                -> (interaction class): HLAsetServiceReporting (handle: 561, order=RECEIVE, transport=RELIABLE, space=null)
+                       (parameter): HLAreportingState, handle=562
+
+DEBUG [main] portico.lrc: ATTEMPT Publish [768] with attributes [769, 770, 771, 772, 773, 774, 775, 776, 777]
+TRACE [main] portico.lrc: NOTICE  Implicitly adding privToDelete
+INFO  [main] portico.lrc: SUCCESS Published [768] with attributes [769, 770, 771, 772, 773, 774, 502, 775, 776, 777]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=482, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [768] , name=Scorpio Node
+INFO  [main] portico.lrc: SUCCESS Register instance of class [768], object handle=2
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 770, 771, 772, 773, 774, 775, 776, 777] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 770, 771, 772, 773, 774, 775, 776, 777] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=284, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Publish [754] with attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765]
+TRACE [main] portico.lrc: NOTICE  Implicitly adding privToDelete
+INFO  [main] portico.lrc: SUCCESS Published [754] with attributes [755, 756, 757, 758, 502, 759, 760, 761, 762, 763, 764, 765]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=502, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Subscribe to [754] with attributes [759]
+INFO  [main] portico.lrc: SUCCESS Subscribeed to [754] with attributes [759]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=423, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [754] , name=null
+INFO  [main] portico.lrc: SUCCESS Register instance of class [754], object handle=3
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [754] , name=null
+INFO  [main] portico.lrc: SUCCESS Register instance of class [754], object handle=4
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [754] , name=null
+INFO  [main] portico.lrc: SUCCESS Register instance of class [754], object handle=5
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [754] , name=null
+INFO  [main] portico.lrc: SUCCESS Register instance of class [754], object handle=6
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [754] , name=null
+INFO  [main] portico.lrc: SUCCESS Register instance of class [754], object handle=7
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Register instance of class [754] , name=null
+INFO  [main] portico.lrc: SUCCESS Register instance of class [754], object handle=8
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=318, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=0, source=HAN-539
+DEBUG [Regular] portico.lrc.jgroups: (GMS) findCoordinator(HAN-539)
+DEBUG [Regular] portico.lrc.jgroups: Received request for manifest from a6ecea2f-3477-4430-895b-08484385dcaf
+DEBUG [Regular] portico.lrc.jgroups: Sent manifest (22580b) to a6ecea2f-3477-4430-895b-08484385dcaf
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=22580, source=HAN-40855
+DEBUG [Regular] portico.lrc.jgroups: (GMS) setManifest(HAN-40855)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=11, source=HAN-539
+DEBUG [Regular] portico.lrc.jgroups: (GMS) joinFederation(HAN-539)
+DEBUG [Regular] portico.lrc.jgroups: Received federate join notification: federate=Sagittarius, federation=Zodiac, source=a6ecea2f-3477-4430-895b-08484385dcaf
+INFO  [Regular] portico.lrc.jgroups: Federate [Sagittarius] joined federation [Zodiac]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=5869, source=HAN-539
+DEBUG [Regular] portico.lrc: @REMOTE RoleCall received [handle:2,name:Sagittarius] by local federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc: Created Mom.Federate(Sagittarius), queued discovery notification
+DEBUG [Regular] portico.lrc: Merging 5 additional FOM modules from [Sagittarius]
+TRACE [Regular] portico.lrc.merger: Beginning merge of 6 FOM models
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/sagittarius/foms/zodiac.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/sagittarius/foms/sagittarius.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/sagittarius/foms/core.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/sagittarius/foms/gemini.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/sagittarius/foms/scorpio.xml] into combined FOM
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=26115, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received MOM object discovery for federate [MOM.Federate(Sagittarius)]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD Discovery of object (not subscribed): object=2097151
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=556, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=442, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=301, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] published object class [748] with attributes [752, 753, 749, 502, 750, 751]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=503, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=523, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=402, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=236, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=267, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=267, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Discover object: owner=Sagittarius, object=2097153, class=748, owned=[749, 752, 502, 753, 751, 750]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD Discovery of object (not subscribed): object=2097153
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to object class [768] with attributes [769, 770, 771, 772, 773, 774, 775, 776, 777]]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to object class [754] with attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765]]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] published object class [754] with attributes [502, 759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] published interaction class [736]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to interaction class [746]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to interaction class [744]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=267, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=267, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to interaction class [738]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=423, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to interaction class [741]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Sagittarius] subscribed to object class [766] with attributes [767]]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=4, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [4]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=4,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [4], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [4], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=7, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=7,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [7], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [7], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=8, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [8]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=8,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [8], attributes [755, 756, 759] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [8], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=5, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [5]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=5,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [5], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [5], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=6, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [6]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=6,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [6], attributes [755, 756, 759] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [6], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=3, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [3]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=3,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=538, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [3], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [3], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=4, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [4]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=4,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [4], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [4], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=7, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=7,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [7], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [7], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=8, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [8]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=8,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [8], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [8], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=5, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [5]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=5,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [5], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [5], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=6, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [6]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=6,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [6], attributes [755, 756, 759] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [6], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Request object update: object=3, attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], sourceFederate=Sagittarius
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Requesting update of attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765], object [3]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK provideAttributeValueUpdate(object=3,attributes=[755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [3], attributes [755, 756, 759] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=141, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [3], attributes [755, 756, 759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          provideAttributeValueUpdate() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=4, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [4] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=4,attributes=[759],tagsize=29)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [4]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [4], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=7, attributes=[759]
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [4]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [7] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=7,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [7]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [7], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=8, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [8] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=8,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [8]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [8], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=5, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [5] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=5,attributes=[759],tagsize=29)
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [8]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [5]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [5], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=6, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [6] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=6,attributes=[759],tagsize=29)
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [5]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [6]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [6], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [6]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=3, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [3] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=3,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [3]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [3], recipients={Sagittarius=>[759]}
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [3]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [4] passed to [Sagittarius]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [7] passed to [Sagittarius]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [8] passed to [Sagittarius]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [5] passed to [Sagittarius]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [6] passed to [Sagittarius]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [3] passed to [Sagittarius]
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=0, source=HAN-7123
+DEBUG [Regular] portico.lrc.jgroups: (GMS) findCoordinator(HAN-7123)
+DEBUG [Regular] portico.lrc.jgroups: Received request for manifest from 2ae91e38-c60d-4a22-b73d-cc27c73ab395
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=22663, source=HAN-40855
+DEBUG [Regular] portico.lrc.jgroups: (GMS) setManifest(HAN-40855)
+DEBUG [Regular] portico.lrc.jgroups: Sent manifest (22663b) to 2ae91e38-c60d-4a22-b73d-cc27c73ab395
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=6, source=HAN-7123
+DEBUG [Regular] portico.lrc.jgroups: (GMS) joinFederation(HAN-7123)
+DEBUG [Regular] portico.lrc.jgroups: Received federate join notification: federate=Gemini, federation=Zodiac, source=2ae91e38-c60d-4a22-b73d-cc27c73ab395
+INFO  [Regular] portico.lrc.jgroups: Federate [Gemini] joined federation [Zodiac]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=5839, source=HAN-7123
+DEBUG [Regular] portico.lrc: @REMOTE RoleCall received [handle:3,name:Gemini] by local federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc: Created Mom.Federate(Gemini), queued discovery notification
+DEBUG [Regular] portico.lrc: Merging 5 additional FOM modules from [Gemini]
+TRACE [Regular] portico.lrc.merger: Beginning merge of 6 FOM models
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/gemini/foms/zodiac.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/gemini/foms/sagittarius.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/gemini/foms/scorpio.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/gemini/foms/core.xml] into combined FOM
+TRACE [Regular] portico.lrc.merger: Merging [file:/D:/zodiac/bin/gemini/foms/gemini.xml] into combined FOM
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=26115, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received MOM object discovery for federate [MOM.Federate(Gemini)]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD Discovery of object (not subscribed): object=4194302
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=27842, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=551, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=551, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=402, source=HAN-7123
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] published object class [766] with attributes [502, 767]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=423, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=280, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=523, source=HAN-7123
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] subscribed to object class [766] with attributes [767]]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=267, source=HAN-7123
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Discover object: owner=Gemini, object=4194304, class=766, owned=[767, 502]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD Discovery of object (not subscribed): object=4194304
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] subscribed to object class [754] with attributes [755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765]]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] subscribed to interaction class [736]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=236, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=236, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=236, source=HAN-7123
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=236, source=HAN-7123
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] published interaction class [746]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] published interaction class [744]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] published interaction class [738]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Federate [Gemini] published interaction class [741]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=121, source=HAN-7123
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received INTERACTION [746] with parameters [747] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD interaction of class [746]: no subscription
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Interaction ignored: not subscribed
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=3137, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2899, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [4] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=4,attributes={759(3050b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [4]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [4] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [4] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [4]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [7] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=7,attributes={759(2814b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [7]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [7] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [7] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [7]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=4,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=7,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [4]
+TRACE [Regular] portico.lrc: Attributes [759] of object [4] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [4] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [7]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [4]
+TRACE [Regular] portico.lrc: Attributes [759] of object [7] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=4,attributes=[759])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=3243, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=3364, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [7] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=7,attributes=[759])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=3005, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=3129, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+DEBUG [Thread-2] portico.lrc: ATTEMPT Update object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [Thread-2] portico.lrc: SUCCESS Updated object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [Thread-1] portico.lrc: ATTEMPT Update object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+INFO  [Thread-1] portico.lrc: SUCCESS Updated object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=7, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [7] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=7,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [7]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [7], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=4, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [4] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=4,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [4]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [4], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [4]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [7] passed to [Sagittarius]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [4] passed to [Sagittarius]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=103, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received INTERACTION [736] with parameters [737] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD interaction of class [736]: no subscription
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Interaction ignored: not subscribed
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=114, source=HAN-7123
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received INTERACTION [738] with parameters [739, 740] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD interaction of class [738]: no subscription
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Interaction ignored: not subscribed
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2018, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2026, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [4] with attributes [759] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2018, source=HAN-539
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=4,attributes={759(1942b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2018, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2018, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [4]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [4] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2022, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [4] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [4]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [7] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=7,attributes={759(1938b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [7]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [7] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [7] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [7]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [8] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=8,attributes={759(1942b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [8]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [8] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [8] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [8]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [5] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=5,attributes={759(1946b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [5]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [5] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [5] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [5]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [6] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=6,attributes={759(1942b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [6]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [6] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [6] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [6]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [3] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=3,attributes={759(1938b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [3]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [3] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [3] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [3]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [4] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=4,attributes={759(1942b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [4]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [4] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [4] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [4]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [7] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=7,attributes={759(1938b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [7]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [7] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [7] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [7]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [8] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=8,attributes={759(1942b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [8]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [8] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [8] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [8]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [5] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=5,attributes={759(1938b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [5]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [5] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [5] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [5]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [6] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=6,attributes={759(1942b)}) (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [6]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [6] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [6] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [6]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [3] with attributes [759] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK reflectAttributeValues(object=3,attributes={759(1942b)}) (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [3]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Sent direct ownership acquisition request for attributes [759] of object [3] from federate [Scorpio Node 9C-8E-99-35-12-BA]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=464, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Acquire ownership of attributes [759] in object [3] (if available)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: FAILURE Can't take ownership of attributes [759] in object [3]: NONE available
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          reflectAttributeValues() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=4,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=7,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=8,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=5,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=6,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=3,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=4,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=7,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=8,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=5,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=6,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipUnavailable(object=3,attributes=[759])
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipUnavailable() callback complete
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [4]
+TRACE [Regular] portico.lrc: Attributes [759] of object [4] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [7]
+TRACE [Regular] portico.lrc: Attributes [759] of object [7] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [4] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [8]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+TRACE [Regular] portico.lrc: Attributes [759] of object [8] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [4]
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [5]
+TRACE [Regular] portico.lrc: Attributes [759] of object [5] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [6]
+TRACE [Regular] portico.lrc: Attributes [759] of object [6] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-539
+DEBUG [Regular] portico.lrc: @REMOTE [Sagittarius] has released attributes [759] of object [3]
+TRACE [Regular] portico.lrc: Attributes [759] of object [3] released to local federate [Scorpio Node 9C-8E-99-35-12-BA], broadcasting OwnershipAcquired notification
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=4,attributes=[759])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=412, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2158, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [7] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=7,attributes=[759])
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2234, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2154, source=HAN-40855
+DEBUG [Thread-11] portico.lrc: ATTEMPT Update object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [8] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [8]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=8,attributes=[759])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [8], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [8], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [Thread-12] portico.lrc: ATTEMPT Update object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [Thread-12] portico.lrc: SUCCESS Updated object [7], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [Thread-11] portico.lrc: SUCCESS Updated object [4], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2230, source=HAN-40855
+DEBUG [Thread-13] portico.lrc: ATTEMPT Update object [8], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [8], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [8], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [5] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [5]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=5,attributes=[759])
+INFO  [Thread-13] portico.lrc: SUCCESS Updated object [8], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2130, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2234, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [5], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [5], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2126, source=HAN-40855
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [5], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2230, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [5], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [6] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [6]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=6,attributes=[759])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [6], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [6], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [6], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [6], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Ownership of attributes [759] for object [3] passed to [Scorpio Node 9C-8E-99-35-12-BA]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Acquired ownership of attributes [759] of object [3]
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK attributeOwnershipAcquisitionNotification(object=3,attributes=[759])
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [3], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [3], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [Thread-14] portico.lrc: ATTEMPT Update object [5], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [Thread-14] portico.lrc: SUCCESS Updated object [5], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [Thread-16] portico.lrc: ATTEMPT Update object [3], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [Thread-16] portico.lrc: SUCCESS Updated object [3], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Update object [3], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Updated object [3], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          attributeOwnershipAcquisitionNotification() callback complete
+DEBUG [Thread-15] portico.lrc: ATTEMPT Update object [6], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2130, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2234, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2130, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+INFO  [Thread-15] portico.lrc: SUCCESS Updated object [6], attributes [757, 758, 759, 760, 761, 762, 763, 764, 765] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=2234, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=214, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=4, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [4] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=4,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [4]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [4], recipients={Sagittarius=>[759]}
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [4]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=7, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [7] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=7,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [7]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [7], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [7]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=8, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [8] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=8,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [8]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [8], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [8]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=5, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [5] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=5,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [5]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [5], recipients={Sagittarius=>[759]}
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [5]
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=468, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=3, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [3] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=3,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [3]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [3], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [3]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Attribute acquisition request by [Sagittarius]: object=6, attributes=[759]
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: Federate [Scorpio Node 9C-8E-99-35-12-BA] owns attributes [759] of object [6] which are under acquisition request. Notify FederateAmbassador of release request.
+TRACE [ImmediateCallbackDispatcher] portico.lrc: CALLBACK requestAttributeOwnershipRelease(object=6,attributes=[759],tagsize=29)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: ATTEMPT Release Attributes [759] of object [6]
+INFO  [ImmediateCallbackDispatcher] portico.lrc: SUCCESS Released Attributes [759] of object [6], recipients={Sagittarius=>[759]}
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=390, source=HAN-40855
+TRACE [ImmediateCallbackDispatcher] portico.lrc:          requestAttributeOwnershipRelease() callback complete
+DEBUG [Regular] portico.lrc: @REMOTE [Scorpio Node 9C-8E-99-35-12-BA] has released attributes [759] of object [6]
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=151, source=HAN-539
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: @REMOTE Received object UPDATE [2097153] with attributes [752, 753, 749, 750, 751] (RO)
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: DISCARD reflection for object [2097153]: object unknown
+DEBUG [ImmediateCallbackDispatcher] portico.lrc: (veto) Reflection ignored: object unknown
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+DEBUG [main] portico.lrc: ATTEMPT Update object [2], attributes [769, 771, 772, 774] (RO)
+TRACE [Regular] portico.lrc.jgroups: (incoming) asynchronous, channel=Zodiac, size=111, source=HAN-40855
+INFO  [main] portico.lrc: SUCCESS Updated object [2], attributes [769, 771, 772, 774] (RO)
