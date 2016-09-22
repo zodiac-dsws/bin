@@ -1,0 +1,2062 @@
+[DEBUG] Main Credentials: postgres | sagitarii
+[DEBUG] ScorpioFederate Starting The Zodiac Federation
+[DEBUG] ScorpioFederate Zodiac Federation already exists. Bypassing...
+[DEBUG] ScorpioFederate joing Federation Execution
+[DEBUG] ScorpioFederate starting Scorpio...
+[DEBUG] ScorpioClass publish Scorpio attributes
+[DEBUG] ScorpioClass creating new Scorpio Object instance
+[DEBUG] ScorpioClass updating all attributes for first time
+[DEBUG] CoreClass publish Core attributes
+[DEBUG] CoreClass subscribe to Core current instance attribute
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] ScorpioFederate done.
+[DEBUG] CoreClass Received attribute update Core 314BAE
+[DEBUG] CoreClass Received attribute update Core ABBE7C
+[DEBUG] CoreClass Received attribute update Core E84E46
+[DEBUG] CoreClass Received attribute update Core 0204CA
+[DEBUG] CoreClass Received attribute update Core A3E169
+[DEBUG] CoreClass Received attribute update Core 1C0C6F
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] CoreObject Accepted instance 5CBDFAFE-AE0A-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor select_geni (SELECT)
+[DEBUG] CoreClass Core 314BAE finished instance 5CBDFAFE-AE0A-4
+[DEBUG] CoreObject Accepted instance F823EFD0-F8AC-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor select_lapack (SELECT)
+[DEBUG] CoreClass Core ABBE7C finished instance F823EFD0-F8AC-4
+[DEBUG] ConnFactory starting Hibernate as postgres:******@sagitarii
+[DEBUG] ConnFactory starting Hibernate as postgres:******@sagitarii
+[DEBUG] RelationRepository  --- open  session 0D3E356B ---
+[DEBUG] RelationRepository init
+[DEBUG] RelationRepository execute query
+[DEBUG] RelationRepository insert into select_lapack_out ( 
+	id_instance, 
+	id_experiment, 
+	id_activity, 
+	adjacency, 
+	laplacian, 
+	slaplacian, 
+	adjacencyb, 
+	laplacianb, 
+	slaplacianb, 
+	optifunc, 
+	caixa1, 
+	gorder, 
+	mindegree, 
+	maxdegree, 
+	trianglefree, 
+	allowdiscgraphs, 
+	biptonly, 
+	maxresults, 
+	grafo,
+	paramid
+) 
+select 
+	1498324, 354, 4316, 
+	sp.adjacency, 
+	sp.laplacian, 
+	sp.slaplacian, 
+	sp.adjacencyb, 
+	sp.laplacianb, 
+	sp.slaplacianb, 
+	sp.optifunc, 
+	sp.caixa1, 
+	sp.gorder, 
+	sp.mindegree, 
+	sp.maxdegree, 
+	sp.trianglefree, 
+	sp.allowdiscgraphs, 
+	sp.biptonly, 
+	sp.maxresults, 
+	gd.grafo,
+	sp.id_instance	
+from 
+	graphdatabase gd, spectral_parameters sp 
+where 
+	sp.id_experiment = 354 and 
+	sp.gorder::int = gd.ordem and 
+	sp.mindegree::int = gd.grauminimo and 
+	sp.maxdegree::int = gd.graumaximo and 
+	( case when sp.trianglefree = 'on' then 1 else 0 end ) = gd.trianglefree and 
+	( case	when sp.biptonly = 'on' then 1 else 0 end ) = gd.bipartite and 
+	( case when sp.allowdiscgraphs = 'on' then 1 else 0 end ) = gd.conexo and 
+	( sp.optifunc like '%lambda%' or 
+		sp.optifunc like '%mu%' or 
+		sp.optifunc like '%q!_%' ESCAPE '!' 
+	) 
+[DEBUG] HibernateDAO open DAO for entity Relation
+[DEBUG] HibernateDAO query
+[DEBUG] HibernateDAO DAO finished in 0.0 seconds
+[DEBUG] RelationRepository commit session 0D3E356B
+[DEBUG] RelationRepository  --- close session 0D3E356B ---
+[DEBUG] RelationRepository done
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] RelationRepository  --- open  session 26EE0D18 ---
+[DEBUG] RelationRepository init
+[DEBUG] RelationRepository execute query
+[DEBUG] RelationRepository insert into select_geni_out ( 
+	id_instance, 
+	id_experiment, 
+	id_activity, 
+	adjacency, 
+	laplacian, 
+	slaplacian, 
+	adjacencyb, 
+	laplacianb, 
+	slaplacianb, 
+	optifunc, 
+	caixa1, 
+	gorder, 
+	mindegree, 
+	maxdegree, 
+	trianglefree, 
+	allowdiscgraphs, 
+	biptonly, 
+	maxresults, 
+	chromatic, 
+	chromaticb, 
+	click, 
+	clickb, 
+	largestdegree, 
+	numedges,
+	grafo,
+	paramid	
+) 
+select 
+	1498323, 354, 4305, 
+	sp.adjacency, 
+	sp.laplacian, 
+	sp.slaplacian, 
+	sp.adjacencyb, 
+	sp.laplacianb, 
+	sp.slaplacianb, 
+	sp.optifunc, 
+	sp.caixa1, 
+	sp.gorder, 
+	sp.mindegree, 
+	sp.maxdegree, 
+	sp.trianglefree, 
+	sp.allowdiscgraphs, 
+	sp.biptonly, 
+	sp.maxresults, 
+	sp.chromatic, 
+	sp.chromaticb, 
+	sp.click, 
+	sp.clickb, 
+	sp.largestdegree, 
+	sp.numedges, 
+	gd.grafo,
+	sp.id_instance	
+from 
+	graphdatabase gd, spectral_parameters sp 
+where 
+	sp.id_experiment = 354 and 
+	sp.gorder::int = gd.ordem and 
+	sp.mindegree::int = gd.grauminimo and 
+	sp.maxdegree::int = gd.graumaximo and 
+	( case	when sp.trianglefree = 'on' then 1 else 0 end ) = gd.trianglefree and 
+	( case	when sp.biptonly = 'on' then 1 else 0 end ) = gd.bipartite and 
+	( case when sp.allowdiscgraphs = 'on' then 1 else 0 end ) = gd.conexo and 
+	( sp.optifunc like '%omega%' or 
+		sp.optifunc like '%chi%' or 
+		sp.optifunc like '%SIZE%' or 
+		sp.optifunc like '%d!_%' ESCAPE '!' 
+	) 
+[DEBUG] HibernateDAO open DAO for entity Relation
+[DEBUG] HibernateDAO query
+[DEBUG] HibernateDAO DAO finished in 0.0 seconds
+[DEBUG] RelationRepository commit session 26EE0D18
+[DEBUG] RelationRepository  --- close session 26EE0D18 ---
+[DEBUG] RelationRepository done
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance 0C4D766A-1662-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 0C4D766A-1662-4
+[DEBUG] CoreObject Accepted instance 1D57580E-6A0C-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 1D57580E-6A0C-4
+[DEBUG] CoreObject Accepted instance 3EADD606-58A2-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 3EADD606-58A2-4
+[DEBUG] CoreObject Accepted instance 9C165719-9D9E-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 9C165719-9D9E-4
+[DEBUG] CoreObject Accepted instance 44ED6481-8BD9-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 44ED6481-8BD9-4
+[DEBUG] CoreObject Accepted instance FC639BC1-4F27-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance FC639BC1-4F27-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance E63F9882-A2D0-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance E63F9882-A2D0-4
+[DEBUG] CoreObject Accepted instance 1F964BFB-1914-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 1F964BFB-1914-4
+[DEBUG] CoreObject Accepted instance 1CEF06F9-5D30-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 1CEF06F9-5D30-4
+[DEBUG] CoreObject Accepted instance E56D5555-651C-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance E56D5555-651C-4
+[DEBUG] CoreObject Accepted instance 5D8E7AA2-5A8C-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 5D8E7AA2-5A8C-4
+[DEBUG] CoreObject Accepted instance 1536EF0B-B76E-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 1536EF0B-B76E-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance 0B6BB3A9-5F9D-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 0B6BB3A9-5F9D-4
+[DEBUG] CoreObject Accepted instance E64CAF4A-D499-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance E64CAF4A-D499-4
+[DEBUG] CoreObject Accepted instance 525E02BC-1786-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 525E02BC-1786-4
+[DEBUG] CoreObject Accepted instance D9BA65CD-F1B3-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance D9BA65CD-F1B3-4
+[DEBUG] CoreObject Accepted instance 746AD64C-984A-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 746AD64C-984A-4
+[DEBUG] CoreObject Accepted instance C3A1EA89-BB66-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance C3A1EA89-BB66-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance FF36FDC5-4723-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance FF36FDC5-4723-4
+[DEBUG] CoreObject Accepted instance A7D8CEEB-0EDB-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance A7D8CEEB-0EDB-4
+[DEBUG] CoreObject Accepted instance 1AF2751D-4A1D-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 1AF2751D-4A1D-4
+[DEBUG] CoreObject Accepted instance 32053219-B3B5-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 32053219-B3B5-4
+[DEBUG] CoreObject Accepted instance AC446D36-4F60-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance AC446D36-4F60-4
+[DEBUG] CoreObject Accepted instance EC09649E-7E34-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance EC09649E-7E34-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance C840B164-2653-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance C840B164-2653-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 0F2051C0-2016-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 0F2051C0-2016-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 2B4AD56F-9CF8-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 2B4AD56F-9CF8-4
+[DEBUG] CoreObject Accepted instance 3F2D6F42-0EC7-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 3F2D6F42-0EC7-4
+[DEBUG] CoreObject Accepted instance C30BDD9E-4B62-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance C30BDD9E-4B62-4
+[DEBUG] CoreObject Accepted instance BBB11FC0-3609-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance BBB11FC0-3609-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 3424E3C0-38EA-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 3424E3C0-38EA-4
+[DEBUG] CoreObject Accepted instance A8879001-2A69-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance A8879001-2A69-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 716F1DD2-2DF1-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 716F1DD2-2DF1-4
+[DEBUG] CoreObject Accepted instance 8654E856-10BE-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 8654E856-10BE-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance F1E96F2A-230E-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance F1E96F2A-230E-4
+[DEBUG] CoreObject Accepted instance 4B35FBCD-FEC8-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 4B35FBCD-FEC8-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance 41384D4E-A2C3-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 41384D4E-A2C3-4
+[DEBUG] CoreObject Accepted instance 3A6D35AF-A81E-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 3A6D35AF-A81E-4
+[DEBUG] CoreObject Accepted instance 88DB4733-E0D9-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 88DB4733-E0D9-4
+[DEBUG] CoreObject Accepted instance 650AE5C2-2DDB-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 650AE5C2-2DDB-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance AC98B926-2B8F-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance AC98B926-2B8F-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] CoreObject Accepted instance 42BFDF42-C614-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 42BFDF42-C614-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] CoreObject Accepted instance 2DBDB8D0-4B33-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 2DBDB8D0-4B33-4
+[DEBUG] CoreObject Accepted instance 13704D56-B0D1-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 13704D56-B0D1-4
+[DEBUG] CoreObject Accepted instance 51FCF0BC-3ECA-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 51FCF0BC-3ECA-4
+[DEBUG] CoreObject Accepted instance 0897A6BB-805A-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 0897A6BB-805A-4
+[DEBUG] CoreObject Accepted instance FA1B486D-ABB0-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance FA1B486D-ABB0-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance D3FF1A97-8FD9-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance D3FF1A97-8FD9-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 8BD04FF4-5264-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 8BD04FF4-5264-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 4EA62668-58F2-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 4EA62668-58F2-4
+[DEBUG] CoreObject Accepted instance 2ADB4525-7F89-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 2ADB4525-7F89-4
+[DEBUG] CoreObject Accepted instance 05F86085-0379-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 05F86085-0379-4
+[DEBUG] CoreObject Accepted instance 306DA0B1-2918-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 306DA0B1-2918-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 274EDC81-C537-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 274EDC81-C537-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 7DFDA2A8-7AC9-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 7DFDA2A8-7AC9-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 16DC1EF3-7440-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 16DC1EF3-7440-4
+[DEBUG] CoreObject Accepted instance E6D9AC2B-FAFA-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance E6D9AC2B-FAFA-4
+[DEBUG] CoreObject Accepted instance 6A5D9EE5-0E3A-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 6A5D9EE5-0E3A-4
+[DEBUG] CoreObject Accepted instance 989C0888-3783-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 989C0888-3783-4
+[DEBUG] CoreObject Accepted instance 913E06B9-C3A4-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 913E06B9-C3A4-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance F8711DE0-7A5E-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance F8711DE0-7A5E-4
+[DEBUG] CoreObject Accepted instance D67E9002-510A-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance D67E9002-510A-4
+[DEBUG] CoreObject Accepted instance 00884FA3-5D40-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 00884FA3-5D40-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 591BAE61-C403-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 591BAE61-C403-4
+[DEBUG] CoreObject Accepted instance 70DC6788-6823-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 70DC6788-6823-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance A1B650C0-8798-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance A1B650C0-8798-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 97643953-C9CC-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 97643953-C9CC-4
+[DEBUG] CoreObject Accepted instance D3B4D0D3-C970-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance D3B4D0D3-C970-4
+[DEBUG] CoreObject Accepted instance FEC9DBAF-4350-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance FEC9DBAF-4350-4
+[DEBUG] CoreObject Accepted instance C77642E0-DD79-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance C77642E0-DD79-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 36699F57-E3FC-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 36699F57-E3FC-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] CoreObject Accepted instance 72775107-2D5D-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 72775107-2D5D-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 6F2CA895-76D8-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 6F2CA895-76D8-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 31AF4B64-19A9-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 31AF4B64-19A9-4
+[DEBUG] CoreObject Accepted instance 2ABACFF5-B232-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 2ABACFF5-B232-4
+[DEBUG] CoreObject Accepted instance 7430E8E5-54C3-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 7430E8E5-54C3-4
+[DEBUG] CoreObject Accepted instance CAD8D2B1-1B7E-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance CAD8D2B1-1B7E-4
+[DEBUG] CoreObject Accepted instance 3C748E06-79E5-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 3C748E06-79E5-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 3F242990-7151-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 3F242990-7151-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance D145FE23-594A-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance D145FE23-594A-4
+[DEBUG] CoreObject Accepted instance 93B37F5E-6A51-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 93B37F5E-6A51-4
+[DEBUG] CoreObject Accepted instance 39D9532D-CDF7-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 39D9532D-CDF7-4
+[DEBUG] CoreObject Accepted instance F2D832DB-905F-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance F2D832DB-905F-4
+[DEBUG] CoreObject Accepted instance CE756DE0-EB9F-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance CE756DE0-EB9F-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance DBAAC74D-8CDB-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance DBAAC74D-8CDB-4
+[DEBUG] CoreObject Accepted instance F22D2C6D-6110-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance F22D2C6D-6110-4
+[DEBUG] CoreObject Accepted instance 45F869BB-322C-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 45F869BB-322C-4
+[DEBUG] CoreObject Accepted instance 41C8888E-2A8F-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 41C8888E-2A8F-4
+[DEBUG] CoreObject Accepted instance 9E9D1D08-316F-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 9E9D1D08-316F-4
+[DEBUG] CoreObject Accepted instance 65271EDF-16C5-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 65271EDF-16C5-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance 0D740EB7-AA7F-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 0D740EB7-AA7F-4
+[DEBUG] CoreObject Accepted instance F15B6013-2AD9-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance F15B6013-2AD9-4
+[DEBUG] CoreObject Accepted instance 3AB25BD8-11AB-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 3AB25BD8-11AB-4
+[DEBUG] CoreObject Accepted instance 15F164A0-B3BE-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 15F164A0-B3BE-4
+[DEBUG] CoreObject Accepted instance E5820E72-ED62-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance E5820E72-ED62-4
+[DEBUG] CoreObject Accepted instance E7EF903D-836F-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance E7EF903D-836F-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance 38B24508-2FDC-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 38B24508-2FDC-4
+[DEBUG] CoreObject Accepted instance 53952F4B-9CA7-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 53952F4B-9CA7-4
+[DEBUG] CoreObject Accepted instance 228BBEF1-5490-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 228BBEF1-5490-4
+[DEBUG] CoreObject Accepted instance 3586F93E-D2B9-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 3586F93E-D2B9-4
+[DEBUG] CoreObject Accepted instance 92C070D4-3D49-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 92C070D4-3D49-4
+[DEBUG] CoreObject Accepted instance 74FB6BC9-4334-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 74FB6BC9-4334-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance 8E416470-3FDD-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 8E416470-3FDD-4
+[DEBUG] CoreObject Accepted instance E6794909-0BFE-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance E6794909-0BFE-4
+[DEBUG] CoreObject Accepted instance 05686978-340E-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 05686978-340E-4
+[DEBUG] CoreObject Accepted instance C9E8D242-C74A-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance C9E8D242-C74A-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 8422F47F-17C9-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 8422F47F-17C9-4
+[DEBUG] CoreObject Accepted instance 0A0FE20F-D7F5-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 0A0FE20F-D7F5-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance 1295FCE9-D3E6-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 1295FCE9-D3E6-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 3C996689-0590-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 3C996689-0590-4
+[DEBUG] CoreObject Accepted instance 674A8CBD-CE75-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 674A8CBD-CE75-4
+[DEBUG] CoreObject Accepted instance 4E07AEC9-CB90-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 4E07AEC9-CB90-4
+[DEBUG] CoreObject Accepted instance 49308B16-DEFF-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 49308B16-DEFF-4
+[DEBUG] CoreObject Accepted instance C19704BF-CD19-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance C19704BF-CD19-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance D41EC801-E9B5-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance D41EC801-E9B5-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance FDCD262C-5C75-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance FDCD262C-5C75-4
+[DEBUG] CoreObject Accepted instance 6E78C761-185B-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 6E78C761-185B-4
+[DEBUG] CoreObject Accepted instance 7DFC563D-ACD3-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 7DFC563D-ACD3-4
+[DEBUG] CoreObject Accepted instance F779F7D8-3612-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance F779F7D8-3612-4
+[DEBUG] CoreObject Accepted instance 78065CA4-203B-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 78065CA4-203B-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance FEA0D90C-6B7D-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance FEA0D90C-6B7D-4
+[DEBUG] CoreObject Accepted instance ABB8B96F-A945-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance ABB8B96F-A945-4
+[DEBUG] CoreObject Accepted instance B38E1F1A-63C7-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance B38E1F1A-63C7-4
+[DEBUG] CoreObject Accepted instance 635F18B3-244F-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 635F18B3-244F-4
+[DEBUG] CoreObject Accepted instance 959E89DC-03AE-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 959E89DC-03AE-4
+[DEBUG] CoreObject Accepted instance 6F8977A3-65C8-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 6F8977A3-65C8-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance BB29038A-DE2C-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance BB29038A-DE2C-4
+[DEBUG] CoreObject Accepted instance E52C3DB8-28F5-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance E52C3DB8-28F5-4
+[DEBUG] CoreObject Accepted instance F3523C0A-FC0A-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance F3523C0A-FC0A-4
+[DEBUG] CoreObject Accepted instance 33985F3D-1070-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 33985F3D-1070-4
+[DEBUG] CoreObject Accepted instance 8F85AE30-0139-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 8F85AE30-0139-4
+[DEBUG] CoreObject Accepted instance 925743FC-D701-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 925743FC-D701-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 68F58613-8C97-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 68F58613-8C97-4
+[DEBUG] CoreObject Accepted instance D6FCA7AC-52F8-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance D6FCA7AC-52F8-4
+[DEBUG] CoreObject Accepted instance 0010D7A2-67F9-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 0010D7A2-67F9-4
+[DEBUG] CoreObject Accepted instance 38A1515E-6630-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 38A1515E-6630-4
+[DEBUG] CoreObject Accepted instance 73253C52-8CA2-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 73253C52-8CA2-4
+[DEBUG] CoreObject Accepted instance D3932162-A54A-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance D3932162-A54A-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance 88E470B4-8541-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 88E470B4-8541-4
+[DEBUG] CoreObject Accepted instance 708485A6-AA30-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 708485A6-AA30-4
+[DEBUG] CoreObject Accepted instance 90EB7749-0117-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 90EB7749-0117-4
+[DEBUG] CoreObject Accepted instance FDA9CFC6-E73E-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance FDA9CFC6-E73E-4
+[DEBUG] CoreObject Accepted instance 7892AD93-654F-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 7892AD93-654F-4
+[DEBUG] CoreObject Accepted instance E40517AF-96DE-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance E40517AF-96DE-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance 7BCF7548-26AF-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 7BCF7548-26AF-4
+[DEBUG] CoreObject Accepted instance E2E31EC9-5ACB-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance E2E31EC9-5ACB-4
+[DEBUG] CoreObject Accepted instance 61B12A1B-A747-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 61B12A1B-A747-4
+[DEBUG] CoreObject Accepted instance E7AEAE0D-9980-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance E7AEAE0D-9980-4
+[DEBUG] CoreObject Accepted instance DF432439-8674-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance DF432439-8674-4
+[DEBUG] CoreObject Accepted instance 125C9142-51F9-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 125C9142-51F9-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance DE1CF6DD-2828-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance DE1CF6DD-2828-4
+[DEBUG] CoreObject Accepted instance 24CCEFDF-36CA-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 24CCEFDF-36CA-4
+[DEBUG] CoreObject Accepted instance F02E52ED-3595-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance F02E52ED-3595-4
+[DEBUG] CoreObject Accepted instance 83B8AA2B-D6C8-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 83B8AA2B-D6C8-4
+[DEBUG] CoreObject Accepted instance 6D98DCB2-7A97-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 6D98DCB2-7A97-4
+[DEBUG] CoreObject Accepted instance 4EBA10D4-AA11-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 4EBA10D4-AA11-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance 89E9CD85-0F0F-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 89E9CD85-0F0F-4
+[DEBUG] CoreObject Accepted instance 4AF32F82-02FC-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 4AF32F82-02FC-4
+[DEBUG] CoreObject Accepted instance 0CD7A9B5-91BE-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 0CD7A9B5-91BE-4
+[DEBUG] CoreObject Accepted instance C68668D8-6C2B-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance C68668D8-6C2B-4
+[DEBUG] CoreObject Accepted instance 531B3E17-B0DE-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 531B3E17-B0DE-4
+[DEBUG] CoreObject Accepted instance 72E5F81C-A2A1-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 72E5F81C-A2A1-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 2D7DA0AF-77B7-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 2D7DA0AF-77B7-4
+[DEBUG] CoreObject Accepted instance 39AF73CF-E619-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 39AF73CF-E619-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] CoreObject Accepted instance E9B4B55F-D205-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance E9B4B55F-D205-4
+[DEBUG] CoreObject Accepted instance 8373EA02-D96F-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 8373EA02-D96F-4
+[DEBUG] CoreObject Accepted instance 8108BE42-AE04-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 8108BE42-AE04-4
+[DEBUG] CoreObject Accepted instance 18B4DC36-A4EE-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 18B4DC36-A4EE-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] CoreObject Accepted instance 2A43789D-4D49-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 2A43789D-4D49-4
+[DEBUG] CoreObject Accepted instance 08850D44-E019-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 08850D44-E019-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 6B58D224-B7B2-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 6B58D224-B7B2-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance A998E862-859D-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance A998E862-859D-4
+[DEBUG] CoreObject Accepted instance 79AF2EFD-233D-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 79AF2EFD-233D-4
+[DEBUG] CoreObject Accepted instance DF4E212B-8A53-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance DF4E212B-8A53-4
+[DEBUG] CoreObject Accepted instance 2D05C176-88F2-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 2D05C176-88F2-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance DD8FBB70-CD3C-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance DD8FBB70-CD3C-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance FC624E6B-2A9B-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance FC624E6B-2A9B-4
+[DEBUG] CoreObject Accepted instance 8BD2CEE1-226B-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 8BD2CEE1-226B-4
+[DEBUG] CoreObject Accepted instance 9F4643EC-4229-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 9F4643EC-4229-4
+[DEBUG] CoreObject Accepted instance 6F9C29CC-3DFE-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 6F9C29CC-3DFE-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 18CB77A1-93D1-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 18CB77A1-93D1-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 3E3A650E-A7CB-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 3E3A650E-A7CB-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 0BB9ECB8-B0CB-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 0BB9ECB8-B0CB-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 7407234C-F657-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 7407234C-F657-4
+[DEBUG] CoreObject Accepted instance 2256DCED-C562-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 2256DCED-C562-4
+[DEBUG] CoreObject Accepted instance 099FFCD0-1B00-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 099FFCD0-1B00-4
+[DEBUG] CoreObject Accepted instance F01BEF04-06FC-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance F01BEF04-06FC-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance CBC5D197-9337-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance CBC5D197-9337-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 75C7BD22-63CB-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 75C7BD22-63CB-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 00857ED2-0E4A-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 00857ED2-0E4A-4
+[DEBUG] CoreObject Accepted instance 34C570AA-12DA-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 34C570AA-12DA-4
+[DEBUG] CoreObject Accepted instance 6DAEF069-2EB1-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 6DAEF069-2EB1-4
+[DEBUG] CoreObject Accepted instance 01900841-2398-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 01900841-2398-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 90F2A8F7-C07A-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 90F2A8F7-C07A-4
+[DEBUG] CoreObject Accepted instance 1CB9B083-6D3A-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 1CB9B083-6D3A-4
+[DEBUG] CoreObject Accepted instance BD0AC186-4BF9-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance BD0AC186-4BF9-4
+[DEBUG] CoreObject Accepted instance F938B947-FB5F-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance F938B947-FB5F-4
+[DEBUG] CoreObject Accepted instance 6E7DED19-C143-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 6E7DED19-C143-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] CoreObject Accepted instance E5BE0DC3-0A7E-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance E5BE0DC3-0A7E-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] CoreObject Accepted instance A3198A7F-DF18-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance A3198A7F-DF18-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance A1778B31-42A3-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance A1778B31-42A3-4
+[DEBUG] CoreObject Accepted instance 5123AF74-27FA-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 5123AF74-27FA-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 1F38866C-B6DD-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 1F38866C-B6DD-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] CoreObject Accepted instance 1E91AAB0-B26E-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 1E91AAB0-B26E-4
+[DEBUG] CoreObject Accepted instance 8C34A8E0-B6A7-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 8C34A8E0-B6A7-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance CC53748C-C6EB-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance CC53748C-C6EB-4
+[DEBUG] CoreObject Accepted instance 2A5CB18A-33DC-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 2A5CB18A-33DC-4
+[DEBUG] CoreObject Accepted instance FDA01CEF-C024-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance FDA01CEF-C024-4
+[DEBUG] CoreObject Accepted instance 9836D34F-62C4-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 9836D34F-62C4-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance 5B2DB1A8-7CEC-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 5B2DB1A8-7CEC-4
+[DEBUG] CoreObject Accepted instance FF920DBF-D3C5-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance FF920DBF-D3C5-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 7F4033CB-9B68-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 7F4033CB-9B68-4
+[DEBUG] CoreObject Accepted instance F9394A45-FCF1-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance F9394A45-FCF1-4
+[DEBUG] CoreObject Accepted instance C53965AE-8151-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance C53965AE-8151-4
+[DEBUG] CoreObject Accepted instance EBFEDEF3-3357-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance EBFEDEF3-3357-4
+[DEBUG] CoreObject Accepted instance BDD18C91-F633-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance BDD18C91-F633-4
+[DEBUG] CoreObject Accepted instance 5AA04A69-CEC7-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 5AA04A69-CEC7-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 1BA79F3B-67DD-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 1BA79F3B-67DD-4
+[DEBUG] CoreObject Accepted instance 107BF7D0-1266-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 107BF7D0-1266-4
+[DEBUG] CoreObject Accepted instance 3885213C-0536-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 3885213C-0536-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 0964A27E-4653-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 0964A27E-4653-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] CoreObject Accepted instance 59C5BF96-8A65-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 59C5BF96-8A65-4
+[DEBUG] CoreObject Accepted instance 9E4AFAEB-C6DF-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 9E4AFAEB-C6DF-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 7D5E5CA3-FC9D-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 7D5E5CA3-FC9D-4
+[DEBUG] CoreObject Accepted instance 43BFA32B-5825-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 43BFA32B-5825-4
+[DEBUG] CoreObject Accepted instance FAFDDCA0-08C1-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance FAFDDCA0-08C1-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance B223F9A4-76F3-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance B223F9A4-76F3-4
+[DEBUG] CoreObject Accepted instance E732E3DA-F3F8-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance E732E3DA-F3F8-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 9E6F117D-01A3-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 9E6F117D-01A3-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance FEAFD6E3-6043-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance FEAFD6E3-6043-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 0A50BB62-F42C-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 0A50BB62-F42C-4
+[DEBUG] CoreObject Accepted instance AD6879BC-AEA9-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance AD6879BC-AEA9-4
+[DEBUG] CoreObject Accepted instance BACC7B97-B781-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance BACC7B97-B781-4
+[DEBUG] CoreObject Accepted instance E7BA0A6B-197D-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance E7BA0A6B-197D-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreObject Accepted instance E50FD1C0-926D-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance E50FD1C0-926D-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance F5E3AC49-31B6-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance F5E3AC49-31B6-4
+[DEBUG] CoreObject Accepted instance 6529A9CB-EAAD-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 6529A9CB-EAAD-4
+[DEBUG] CoreObject Accepted instance 6C2DBBCD-6648-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 6C2DBBCD-6648-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] CoreObject Accepted instance 2178175B-C304-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 2178175B-C304-4
+[DEBUG] CoreObject Accepted instance 7988D1B1-3AE1-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 7988D1B1-3AE1-4
+[DEBUG] CoreObject Accepted instance B31371DB-E04F-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance B31371DB-E04F-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 73F99C69-08D7-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 73F99C69-08D7-4
+[DEBUG] CoreObject Accepted instance 85A7FFD2-5440-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 85A7FFD2-5440-4
+[DEBUG] CoreObject Accepted instance BA7D253F-0EB4-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance BA7D253F-0EB4-4
+[DEBUG] CoreObject Accepted instance E4DBAF79-79A6-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance E4DBAF79-79A6-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 0BD35D3D-90EF-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 0BD35D3D-90EF-4
+[DEBUG] CoreObject Accepted instance 08190393-24C1-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 08190393-24C1-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance E294EDC6-76D8-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance E294EDC6-76D8-4
+[DEBUG] CoreObject Accepted instance 7CAC6253-4BF5-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 7CAC6253-4BF5-4
+[DEBUG] CoreObject Accepted instance D52E30B2-E6C4-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance D52E30B2-E6C4-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance FFB93718-72A4-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance FFB93718-72A4-4
+[DEBUG] CoreObject Accepted instance 5B934682-088B-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 5B934682-088B-4
+[DEBUG] CoreObject Accepted instance 3347D8CF-0F4B-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 3347D8CF-0F4B-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance B8772F9D-1730-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance B8772F9D-1730-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance CE96D19A-F7E3-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance CE96D19A-F7E3-4
+[DEBUG] CoreObject Accepted instance F24D59F8-869D-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance F24D59F8-869D-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance C1E7E27C-545A-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance C1E7E27C-545A-4
+[DEBUG] CoreObject Accepted instance B83FA757-D838-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance B83FA757-D838-4
+[DEBUG] CoreObject Accepted instance DB0999B4-F89C-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance DB0999B4-F89C-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 900BC575-695F-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 900BC575-695F-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance 13D66DFE-DF2B-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 13D66DFE-DF2B-4
+[DEBUG] CoreObject Accepted instance 16A5C764-93A1-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 16A5C764-93A1-4
+[DEBUG] CoreObject Accepted instance 13DDFE04-2ECF-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 13DDFE04-2ECF-4
+[DEBUG] CoreObject Accepted instance 42345062-426F-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 42345062-426F-4
+[DEBUG] CoreObject Accepted instance 4B4C9CCF-2B24-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 4B4C9CCF-2B24-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 51026162-DF45-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 51026162-DF45-4
+[DEBUG] CoreObject Accepted instance ECC4ABE3-EFB6-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance ECC4ABE3-EFB6-4
+[DEBUG] CoreObject Accepted instance C6096E73-5B5B-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance C6096E73-5B5B-4
+[DEBUG] CoreObject Accepted instance 41200D64-01B5-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 41200D64-01B5-4
+[DEBUG] CoreObject Accepted instance 542962E3-7744-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 542962E3-7744-4
+[DEBUG] CoreObject Accepted instance 727B9A61-3833-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 727B9A61-3833-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 6D5CD3AE-F560-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 6D5CD3AE-F560-4
+[DEBUG] CoreObject Accepted instance BFF38F43-3079-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance BFF38F43-3079-4
+[DEBUG] CoreObject Accepted instance A4A25385-4DA3-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance A4A25385-4DA3-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 118C4B85-00BE-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 118C4B85-00BE-4
+[DEBUG] CoreObject Accepted instance 3B9BCAAB-92EB-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 3B9BCAAB-92EB-4
+[DEBUG] CoreObject Accepted instance A543A596-F2C9-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance A543A596-F2C9-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] CoreObject Accepted instance B9889388-D6DC-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance B9889388-D6DC-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 6E83E5B7-4CDC-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 6E83E5B7-4CDC-4
+[DEBUG] CoreObject Accepted instance 7C3711F5-E332-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 7C3711F5-E332-4
+[DEBUG] CoreObject Accepted instance 1A7B9809-4619-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 1A7B9809-4619-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 1E4FE57E-8475-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 1E4FE57E-8475-4
+[DEBUG] CoreObject Accepted instance C55F0E8B-2B70-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance C55F0E8B-2B70-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 261903CE-E22C-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 261903CE-E22C-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 546C59EE-A4C0-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 546C59EE-A4C0-4
+[DEBUG] CoreObject Accepted instance F9C534F3-53CC-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance F9C534F3-53CC-4
+[DEBUG] CoreObject Accepted instance 846E4EFB-9507-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 846E4EFB-9507-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 3B4247C0-F98C-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 3B4247C0-F98C-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] CoreObject Accepted instance B6E3818E-6D74-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance B6E3818E-6D74-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 17EE4B00-A843-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 17EE4B00-A843-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 565A4260-7CF1-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 565A4260-7CF1-4
+[DEBUG] CoreObject Accepted instance E0573443-A228-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance E0573443-A228-4
+[DEBUG] CoreObject Accepted instance 53CCAC37-009F-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 53CCAC37-009F-4
+[DEBUG] CoreObject Accepted instance EBB5D9B3-A394-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance EBB5D9B3-A394-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 64E0D4A0-2C3D-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 64E0D4A0-2C3D-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] CoreObject Accepted instance 8353AE43-6A00-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 8353AE43-6A00-4
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 46261684-0DA8-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 46261684-0DA8-4
+[DEBUG] CoreObject Accepted instance 9D1206D9-8AF4-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 9D1206D9-8AF4-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] CoreObject Accepted instance 52EA305B-A06A-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance 52EA305B-A06A-4
+[DEBUG] CoreObject Accepted instance 64D6D466-0C2F-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 64D6D466-0C2F-4
+[DEBUG] CoreObject Accepted instance 6A1F9FA0-8809-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance 6A1F9FA0-8809-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 0204CA
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: A3E169
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 314BAE
+[DEBUG] CoreObject Accepted instance 5F328961-64FB-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance 5F328961-64FB-4
+[DEBUG] CoreObject Accepted instance 4039AA6E-A3F3-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance 4039AA6E-A3F3-4
+[DEBUG] CoreObject Accepted instance 3588B388-BB1B-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance 3588B388-BB1B-4
+[DEBUG] CoreObject Accepted instance D037B72E-9B91-4 by 0204CA@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core 0204CA finished instance D037B72E-9B91-4
+[DEBUG] CoreObject Accepted instance 7955B73C-4B60-4 by A3E169@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor RUNSAGE (MAP)
+[DEBUG] CoreClass Core A3E169 finished instance 7955B73C-4B60-4
+[DEBUG] CoreObject Accepted instance DFACF787-AA5F-4 by 314BAE@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 314BAE finished instance DFACF787-AA5F-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0204CA
+[DEBUG] ScorpioFederate Ownership of Core 0204CA released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core A3E169
+[DEBUG] ScorpioFederate Ownership of Core A3E169 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 314BAE
+[DEBUG] ScorpioFederate Ownership of Core 314BAE released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: E84E46
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: ABBE7C
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: 1C0C6F
+[DEBUG] CoreObject Accepted instance BC8D523D-3C5C-4 by E84E46@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core E84E46 finished instance BC8D523D-3C5C-4
+[DEBUG] CoreObject Accepted instance B064ACF2-1E30-4 by ABBE7C@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core ABBE7C finished instance B064ACF2-1E30-4
+[DEBUG] CoreObject Accepted instance CD68E30A-6D97-4 by 1C0C6F@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor EIGSOLVE (MAP)
+[DEBUG] CoreClass Core 1C0C6F finished instance CD68E30A-6D97-4
+[DEBUG] ScorpioFederate Received request to release ownership of Core E84E46
+[DEBUG] ScorpioFederate Ownership of Core E84E46 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 1C0C6F
+[DEBUG] ScorpioFederate Ownership of Core 1C0C6F released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core ABBE7C
+[DEBUG] ScorpioFederate Ownership of Core ABBE7C released.
+[DEBUG] CoreClass Received attribute update Core 314BAE
+[ERROR] CoreClass Send Core Initial State error: org.portico.lrc.compat.JAttributeNotOwned: attribute [761] of instance: 2097154 not owned by [Scorpio Node 9C-8E-99-35-12-BA] (owner:null)
+[DEBUG] CoreClass Received attribute update Core ABBE7C
+[ERROR] CoreClass Send Core Initial State error: org.portico.lrc.compat.JAttributeNotOwned: attribute [761] of instance: 2097155 not owned by [Scorpio Node 9C-8E-99-35-12-BA] (owner:null)
+[DEBUG] CoreClass Received attribute update Core E84E46
+[ERROR] CoreClass Send Core Initial State error: org.portico.lrc.compat.JAttributeNotOwned: attribute [761] of instance: 2097156 not owned by [Scorpio Node 9C-8E-99-35-12-BA] (owner:null)
+[DEBUG] CoreClass Received attribute update Core 0204CA
+[ERROR] CoreClass Send Core Initial State error: org.portico.lrc.compat.JAttributeNotOwned: attribute [761] of instance: 2097157 not owned by [Scorpio Node 9C-8E-99-35-12-BA] (owner:null)
+[DEBUG] CoreClass Received attribute update Core A3E169
+[ERROR] CoreClass Send Core Initial State error: org.portico.lrc.compat.JAttributeNotOwned: attribute [761] of instance: 2097158 not owned by [Scorpio Node 9C-8E-99-35-12-BA] (owner:null)
+[DEBUG] CoreClass Received attribute update Core 1C0C6F
+[ERROR] CoreClass Send Core Initial State error: org.portico.lrc.compat.JAttributeNotOwned: attribute [761] of instance: 2097159 not owned by [Scorpio Node 9C-8E-99-35-12-BA] (owner:null)

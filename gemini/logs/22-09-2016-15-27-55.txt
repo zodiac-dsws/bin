@@ -1,0 +1,271 @@
+[DEBUG] Main Credentials: postgres | sagitarii
+[DEBUG] GeminiFederate Starting Zodiac Gemini Instance Generator
+[DEBUG] GeminiFederate Federation already exists. Bypassing...
+[DEBUG] GeminiFederate joing Federation Execution ...
+[DEBUG] GeminiClass publish
+[DEBUG] GeminiClass subscribe
+[DEBUG] GeminiClass Gemini is online
+[DEBUG] CoreClass subscribe
+[DEBUG] GeminiAmbassador New object discovered (HLA2097158)
+[DEBUG] GeminiAmbassador New object discovered (HLA2097157)
+[DEBUG] GeminiAmbassador New object discovered (HLA2097159)
+[DEBUG] GeminiAmbassador New object discovered (HLA2097154)
+[DEBUG] GeminiAmbassador New object discovered (HLA2097156)
+[DEBUG] GeminiAmbassador New object discovered (HLA2097155)
+[DEBUG] ExperimentStartedInteractionClass publish
+[DEBUG] ExperimentFinishedInteractionClass publish
+[DEBUG] GeminiFederate done.
+[DEBUG] StartExperimentThread start thread
+[DEBUG] StartExperimentThread Starting Experiment ID 354...
+[DEBUG] ConnFactory starting Hibernate as postgres:******@sagitarii
+[DEBUG] FragmentInstancer Checking fragment 6F19DBDD ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 6F19DBDD
+[DEBUG] FragmentInstancer Searching for Fragment 6F19DBDD entrance point: Checking Activity SEL_LAPACK (select_lapack)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SEL_LAPACK is not FRAGMENT entrance point. trying as EXPERIMENT E.P.
+[DEBUG] SelectInstanceGenerator Activity 'SEL_LAPACK' allowed to run.
+[DEBUG] SelectInstanceGenerator generating instances...
+[DEBUG] SelectInstanceGenerator 'SELECT' type detected: single instance will be created. No need to fetch data.
+[DEBUG] InstanceCreator will generate xml data for instance 0B5D2CC9-75BE-4 with activity entry point FA958CF3 (SEL_LAPACK)
+[DEBUG] InstanceCreator no parameter do convert data
+[DEBUG] InstanceCreator generating xml entry for activity FA958CF3 SEL_LAPACK (SELECT)
+[DEBUG] InstanceCreator will use executor select_lapack
+[DEBUG] InstanceCreator this activity will run a SQL script
+[DEBUG] InstanceCreator processing FA958CF3 next activities
+[DEBUG] InstanceCreator instance 0B5D2CC9-75BE-4 xml data generation is done
+[DEBUG] FragmentInstancer done. 1 instances generated. will store...
+[DEBUG] FragmentInstancer done storing instances to database. updating fragment 6F19DBDD status to RUNNING...
+[DEBUG] FragmentInstancer done updating Fragment 6F19DBDD
+[DEBUG] FragmentInstancer Checking fragment 6CF9E390 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 6CF9E390
+[DEBUG] FragmentInstancer Searching for Fragment 6CF9E390 entrance point: Checking Activity EIGSOLVE (EIGSOLVE)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer EIGSOLVE is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table select_lapack_out data...
+[DEBUG] FragmentInstancer table select_lapack_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SEL_LAPACK (FA958CF3) produced no data. Table select_lapack_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer EIGSOLVE is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 57457FC4 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 57457FC4
+[DEBUG] FragmentInstancer Searching for Fragment 57457FC4 entrance point: Checking Activity SEL_GENI (select_geni)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SEL_GENI is not FRAGMENT entrance point. trying as EXPERIMENT E.P.
+[DEBUG] SelectInstanceGenerator Activity 'SEL_GENI' allowed to run.
+[DEBUG] SelectInstanceGenerator generating instances...
+[DEBUG] SelectInstanceGenerator 'SELECT' type detected: single instance will be created. No need to fetch data.
+[DEBUG] InstanceCreator will generate xml data for instance AD35C820-7983-4 with activity entry point F73105AB (SEL_GENI)
+[DEBUG] InstanceCreator no parameter do convert data
+[DEBUG] InstanceCreator generating xml entry for activity F73105AB SEL_GENI (SELECT)
+[DEBUG] InstanceCreator will use executor select_geni
+[DEBUG] InstanceCreator this activity will run a SQL script
+[DEBUG] InstanceCreator processing F73105AB next activities
+[DEBUG] InstanceCreator instance AD35C820-7983-4 xml data generation is done
+[DEBUG] FragmentInstancer done. 1 instances generated. will store...
+[DEBUG] FragmentInstancer done storing instances to database. updating fragment 57457FC4 status to RUNNING...
+[DEBUG] FragmentInstancer done updating Fragment 57457FC4
+[DEBUG] FragmentInstancer Checking fragment 91E60DEF ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 91E60DEF
+[DEBUG] FragmentInstancer Searching for Fragment 91E60DEF entrance point: Checking Activity SAGE_GENI (RUNSAGE)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SAGE_GENI is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table select_geni_out data...
+[DEBUG] FragmentInstancer table select_geni_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SEL_GENI (F73105AB) produced no data. Table select_geni_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer SAGE_GENI is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 35690E18 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 35690E18
+[DEBUG] FragmentInstancer Searching for Fragment 35690E18 entrance point: Checking Activity FILTER (PORTAL_JOIN)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer FILTER is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table sage_out data...
+[DEBUG] FragmentInstancer table sage_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SAGE_GENI (50A61D74) produced no data. Table sage_out
+[DEBUG] FragmentInstancer verify table eigsolve_out data...
+[DEBUG] FragmentInstancer table eigsolve_out is empty.
+[DEBUG] FragmentInstancer  > needed activity EIGSOLVE (48350710) produced no data. Table eigsolve_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer FILTER is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment CAF45125 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment CAF45125
+[DEBUG] FragmentInstancer Searching for Fragment CAF45125 entrance point: Checking Activity EVALUATE (EVALUATE)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer EVALUATE is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table filter_out data...
+[DEBUG] FragmentInstancer table filter_out is empty.
+[DEBUG] FragmentInstancer  > needed activity FILTER (954D4C3B) produced no data. Table filter_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer EVALUATE is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 6B058F41 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 6B058F41
+[DEBUG] FragmentInstancer Searching for Fragment 6B058F41 entrance point: Checking Activity SELECT (PORTAL_SELECT)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SELECT is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table evaluate_out data...
+[DEBUG] FragmentInstancer table evaluate_out is empty.
+[DEBUG] FragmentInstancer  > needed activity EVALUATE (044BCA1B) produced no data. Table evaluate_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer SELECT is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 9D2FFFA3 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 9D2FFFA3
+[DEBUG] FragmentInstancer Searching for Fragment 9D2FFFA3 entrance point: Checking Activity SHOWG (SHOWGRAPH)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SHOWG is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table select_out data...
+[DEBUG] FragmentInstancer table select_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SELECT (5A7C2A1D) produced no data. Table select_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer SHOWG is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 0A8206B9 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 0A8206B9
+[DEBUG] FragmentInstancer Searching for Fragment 0A8206B9 entrance point: Checking Activity PDFCREATOR (PDFCREATOR)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer PDFCREATOR is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table graphviz_out data...
+[DEBUG] FragmentInstancer table graphviz_out is empty.
+[DEBUG] FragmentInstancer  > needed activity GRAPHVIZ (476BAE7A) produced no data. Table graphviz_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer PDFCREATOR is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 8671E0D1 ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment 8671E0D1
+[DEBUG] FragmentInstancer Searching for Fragment 8671E0D1 entrance point: Checking Activity RESULTS (MOUNT_RESULTS)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer RESULTS is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table pdfcreator_out data...
+[DEBUG] FragmentInstancer table pdfcreator_out is empty.
+[DEBUG] FragmentInstancer  > needed activity PDFCREATOR (08A02339) produced no data. Table pdfcreator_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer RESULTS is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment A72314CE ( status = PREVIEW ):
+[DEBUG] FragmentInstancer will create instances for fragment A72314CE
+[DEBUG] FragmentInstancer Searching for Fragment A72314CE entrance point: Checking Activity FINISH (FINISH)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer FINISH is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table portal_result_files data...
+[DEBUG] FragmentInstancer table portal_result_files is empty.
+[DEBUG] FragmentInstancer  > needed activity RESULTS (6BA0F598) produced no data. Table portal_result_files
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer FINISH is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] StartExperimentThread Experiment 90A89A06-E055-497 is now running.
+[DEBUG] StartExperimentThread end thread
+[DEBUG] GeminiFederate Will generate Instances for Experiment 90A89A06-E055-497. Processing 1 Experiments.
+[DEBUG] InstanceGeneratorThread start thread
+[DEBUG] InstanceGeneratorThread Generate instances for Experiment 90A89A06-E055-497 under external request.
+[DEBUG] InstanceGeneratorThread Experiment 90A89A06-E055-497 found. Generating Instances...
+[DEBUG] FragmentInstancer Checking fragment 6F19DBDD ( status = FINISHED ):
+[DEBUG] FragmentInstancer Checking fragment 6CF9E390 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 6CF9E390
+[DEBUG] FragmentInstancer Searching for Fragment 6CF9E390 entrance point: Checking Activity EIGSOLVE (EIGSOLVE)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer EIGSOLVE is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table select_lapack_out data...
+[DEBUG] FragmentInstancer table select_lapack_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SEL_LAPACK (FA958CF3) produced no data. Table select_lapack_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer EIGSOLVE is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 57457FC4 ( status = FINISHED ):
+[DEBUG] FragmentInstancer Checking fragment 91E60DEF ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 91E60DEF
+[DEBUG] FragmentInstancer Searching for Fragment 91E60DEF entrance point: Checking Activity SAGE_GENI (RUNSAGE)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SAGE_GENI is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table select_geni_out data...
+[DEBUG] FragmentInstancer table select_geni_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SEL_GENI (F73105AB) produced no data. Table select_geni_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer SAGE_GENI is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 35690E18 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 35690E18
+[DEBUG] FragmentInstancer Searching for Fragment 35690E18 entrance point: Checking Activity FILTER (PORTAL_JOIN)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer FILTER is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table eigsolve_out data...
+[DEBUG] FragmentInstancer table eigsolve_out is empty.
+[DEBUG] FragmentInstancer  > needed activity EIGSOLVE (48350710) produced no data. Table eigsolve_out
+[DEBUG] FragmentInstancer verify table sage_out data...
+[DEBUG] FragmentInstancer table sage_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SAGE_GENI (50A61D74) produced no data. Table sage_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer FILTER is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment CAF45125 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment CAF45125
+[DEBUG] FragmentInstancer Searching for Fragment CAF45125 entrance point: Checking Activity EVALUATE (EVALUATE)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer EVALUATE is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table filter_out data...
+[DEBUG] FragmentInstancer table filter_out is empty.
+[DEBUG] FragmentInstancer  > needed activity FILTER (954D4C3B) produced no data. Table filter_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer EVALUATE is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 6B058F41 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 6B058F41
+[DEBUG] FragmentInstancer Searching for Fragment 6B058F41 entrance point: Checking Activity SELECT (PORTAL_SELECT)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SELECT is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table evaluate_out data...
+[DEBUG] FragmentInstancer table evaluate_out is empty.
+[DEBUG] FragmentInstancer  > needed activity EVALUATE (044BCA1B) produced no data. Table evaluate_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer SELECT is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 9D2FFFA3 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 9D2FFFA3
+[DEBUG] FragmentInstancer Searching for Fragment 9D2FFFA3 entrance point: Checking Activity SHOWG (SHOWGRAPH)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer SHOWG is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table select_out data...
+[DEBUG] FragmentInstancer table select_out is empty.
+[DEBUG] FragmentInstancer  > needed activity SELECT (5A7C2A1D) produced no data. Table select_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer SHOWG is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 0A8206B9 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 0A8206B9
+[DEBUG] FragmentInstancer Searching for Fragment 0A8206B9 entrance point: Checking Activity PDFCREATOR (PDFCREATOR)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer PDFCREATOR is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table graphviz_out data...
+[DEBUG] FragmentInstancer table graphviz_out is empty.
+[DEBUG] FragmentInstancer  > needed activity GRAPHVIZ (476BAE7A) produced no data. Table graphviz_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer PDFCREATOR is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment 8671E0D1 ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment 8671E0D1
+[DEBUG] FragmentInstancer Searching for Fragment 8671E0D1 entrance point: Checking Activity RESULTS (MOUNT_RESULTS)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer RESULTS is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table pdfcreator_out data...
+[DEBUG] FragmentInstancer table pdfcreator_out is empty.
+[DEBUG] FragmentInstancer  > needed activity PDFCREATOR (08A02339) produced no data. Table pdfcreator_out
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer RESULTS is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] FragmentInstancer Checking fragment A72314CE ( status = READY ):
+[DEBUG] FragmentInstancer will create instances for fragment A72314CE
+[DEBUG] FragmentInstancer Searching for Fragment A72314CE entrance point: Checking Activity FINISH (FINISH)
+[DEBUG] FragmentInstancer checking data availability
+[DEBUG] FragmentInstancer FINISH is FRAGMENT entrance point
+[DEBUG] FragmentInstancer verify table portal_result_files data...
+[DEBUG] FragmentInstancer table portal_result_files is empty.
+[DEBUG] FragmentInstancer  > needed activity RESULTS (6BA0F598) produced no data. Table portal_result_files
+[DEBUG] FragmentInstancer no data available. is it an experiment E.P. ? 
+[DEBUG] FragmentInstancer FINISH is NOT an EXPERIMENT entrance point.
+[WARN] FragmentInstancer no data found in any source tables. Its READY to go but not now.
+[DEBUG] InstanceGeneratorThread Experiment 90A89A06-E055-497 generate no Instances. Will finish it.
+[DEBUG] InstanceGeneratorThread Broadcast to the Federation Experiment 90A89A06-E055-497 is finished.
+[DEBUG] InstanceGeneratorThread end thread

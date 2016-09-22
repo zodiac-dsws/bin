@@ -1,0 +1,35 @@
+[DEBUG] Main Credentials: null | null
+[DEBUG] ScorpioFederate Starting The Zodiac Federation
+[DEBUG] ScorpioFederate Zodiac Federation already exists. Bypassing...
+[DEBUG] ScorpioFederate joing Federation Execution
+[DEBUG] ScorpioFederate starting Scorpio...
+[DEBUG] ScorpioClass publish Scorpio attributes
+[DEBUG] ScorpioClass creating new Scorpio Object instance
+[DEBUG] ScorpioClass updating all attributes for first time
+[DEBUG] CoreClass publish Core attributes
+[DEBUG] CoreClass subscribe to Core current instance attribute
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] ScorpioFederate done.
+[DEBUG] CoreClass Received attribute update Core 07DE83
+[DEBUG] CoreClass Received attribute update Core B22ECD
+[DEBUG] CoreClass Received attribute update Core B5FF6A
+[DEBUG] CoreClass Received attribute update Core 97639E
+[DEBUG] CoreClass Received attribute update Core 723796
+[DEBUG] CoreClass Received attribute update Core F3DFA0
+[DEBUG] ScorpioFederate Received request to release ownership of Core 07DE83
+[DEBUG] ScorpioFederate Ownership of Core 07DE83 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core B22ECD
+[DEBUG] ScorpioFederate Ownership of Core B22ECD released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core B5FF6A
+[DEBUG] ScorpioFederate Ownership of Core B5FF6A released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 97639E
+[DEBUG] ScorpioFederate Ownership of Core 97639E released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 723796
+[DEBUG] ScorpioFederate Ownership of Core 723796 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core F3DFA0
+[DEBUG] ScorpioFederate Ownership of Core F3DFA0 released.

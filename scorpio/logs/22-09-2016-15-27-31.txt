@@ -1,0 +1,57 @@
+[DEBUG] Main Credentials: null | null
+[DEBUG] ScorpioFederate Starting The Zodiac Federation
+[DEBUG] ScorpioFederate Zodiac Federation already exists. Bypassing...
+[DEBUG] ScorpioFederate joing Federation Execution
+[DEBUG] ScorpioFederate starting Scorpio...
+[DEBUG] ScorpioClass publish Scorpio attributes
+[DEBUG] ScorpioClass creating new Scorpio Object instance
+[DEBUG] ScorpioClass updating all attributes for first time
+[DEBUG] CoreClass publish Core attributes
+[DEBUG] CoreClass subscribe to Core current instance attribute
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] CoreClass Core found in node 9C-8E-99-35-12-BA
+[DEBUG] ScorpioFederate done.
+[DEBUG] CoreClass Received attribute update Core F01201
+[DEBUG] CoreClass Received attribute update Core CC069E
+[DEBUG] CoreClass Received attribute update Core 0EAA51
+[DEBUG] CoreClass Received attribute update Core 0F556A
+[DEBUG] CoreClass Received attribute update Core CAB88D
+[DEBUG] CoreClass Received attribute update Core 80D4CD
+[DEBUG] ScorpioFederate Received request to release ownership of Core F01201
+[DEBUG] ScorpioFederate Ownership of Core F01201 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core CC069E
+[DEBUG] ScorpioFederate Ownership of Core CC069E released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0EAA51
+[DEBUG] ScorpioFederate Ownership of Core 0EAA51 released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 0F556A
+[DEBUG] ScorpioFederate Ownership of Core 0F556A released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core CAB88D
+[DEBUG] ScorpioFederate Ownership of Core CAB88D released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core 80D4CD
+[DEBUG] ScorpioFederate Ownership of Core 80D4CD released.
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: F01201
+[DEBUG] ScorpioFederate Attribute update incommig...
+[DEBUG] CoreClass Request attribute back: CC069E
+[DEBUG] CoreObject Accepted instance 0B5D2CC9-75BE-4 by F01201@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor select_lapack (SELECT)
+[DEBUG] CoreClass Core F01201 finished instance 0B5D2CC9-75BE-4
+[DEBUG] CoreObject Accepted instance AD35C820-7983-4 by CC069E@9C-8E-99-35-12-BA |  Experiment 90A89A06-E055-497 Executor select_geni (SELECT)
+[DEBUG] CoreClass Core CC069E finished instance AD35C820-7983-4
+[DEBUG] ConnFactory starting Hibernate as null:******@null
+[DEBUG] ConnFactory starting Hibernate as null:******@null
+[ERROR] ConnFactory fail: null
+[ERROR] ConnFactory fail: null
+[ERROR] RelationRepository Cannot open Database Session
+[DEBUG] CoreObject  > Instance: AD35C820-7983-4 | Order: 0 | Activity select_geni(F73105AB) finished.
+[DEBUG] CoreObject Instance AD35C820-7983-4 finished.
+[ERROR] RelationRepository Cannot open Database Session
+[DEBUG] CoreObject  > Instance: 0B5D2CC9-75BE-4 | Order: 0 | Activity select_lapack(FA958CF3) finished.
+[DEBUG] CoreObject Instance 0B5D2CC9-75BE-4 finished.
+[DEBUG] ScorpioFederate Received request to release ownership of Core CC069E
+[DEBUG] ScorpioFederate Ownership of Core CC069E released.
+[DEBUG] ScorpioFederate Received request to release ownership of Core F01201
+[DEBUG] ScorpioFederate Ownership of Core F01201 released.
